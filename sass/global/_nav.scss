@@ -1,0 +1,15 @@
+nav {
+    border-bottom: 1px solid palette(gray, mid-light);
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    @include span(4 of 12 before);
+    margin-top: 1rem;
+
+    img {
+        height: 2rem;
+    }
+}

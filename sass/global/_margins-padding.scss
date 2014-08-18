@@ -1,0 +1,13 @@
+/* padding and margins */
+$pad-alpha: .5rem;
+$pad-beta: 1rem;
+$pad-gamma: 1.5rem;
+$pad-delta: 2rem;
+$pad-epsilon: 2.5rem;
+
+
+
+/* general container to keep content within the correct width, 75rem = 1200px */
+.container {
+    @include container(75rem);
+}
