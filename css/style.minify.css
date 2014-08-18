@@ -1,3 +1,4 @@
+/* Universal imports not to be included in the theme refrence */
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -399,6 +400,7 @@ th {
 html {
   line-height: 1.5; }
 
+/*global imports to be used throughout the site */
 /* colors */
 /* line 3, ../sass/global/_type.scss */
 html, body {
@@ -407,62 +409,63 @@ html, body {
 /* line 7, ../sass/global/_type.scss */
 body {
   color: #2b2827;
-  font-family: quicksand, sans-serif; }
+  font-family: quicksand, sans-serif;
+  padding-top: 4rem; }
 
-/* line 12, ../sass/global/_type.scss */
+/* line 13, ../sass/global/_type.scss */
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box; }
 
-/* line 16, ../sass/global/_type.scss */
+/* line 17, ../sass/global/_type.scss */
 h1 {
   font-size: 4.5em; }
 
-/* line 20, ../sass/global/_type.scss */
+/* line 21, ../sass/global/_type.scss */
 h2 {
   font-size: 4em; }
 
-/* line 24, ../sass/global/_type.scss */
+/* line 25, ../sass/global/_type.scss */
 h3 {
   font-size: 3.25em; }
 
-/* line 28, ../sass/global/_type.scss */
+/* line 29, ../sass/global/_type.scss */
 h4 {
   font-size: 3em; }
 
-/* line 32, ../sass/global/_type.scss */
+/* line 33, ../sass/global/_type.scss */
 h5 {
   font-size: 2.5em; }
 
-/* line 36, ../sass/global/_type.scss */
+/* line 37, ../sass/global/_type.scss */
 h6 {
   font-size: 2em; }
 
-/* line 40, ../sass/global/_type.scss */
+/* line 41, ../sass/global/_type.scss */
 p {
   font-size: 1em; }
 
-/* line 44, ../sass/global/_type.scss */
+/* line 45, ../sass/global/_type.scss */
 small {
   font-size: 85%; }
 
-/* line 48, ../sass/global/_type.scss */
+/* line 49, ../sass/global/_type.scss */
 a, button {
   outline: none; }
 
-/* line 52, ../sass/global/_type.scss */
+/* line 53, ../sass/global/_type.scss */
 button {
   border: 0; }
 
-/* line 56, ../sass/global/_type.scss */
+/* line 57, ../sass/global/_type.scss */
 a {
   text-decoration: none; }
-  /* line 59, ../sass/global/_type.scss */
+  /* line 60, ../sass/global/_type.scss */
   a:active, a:focus {
     outline: none; }
 
-/* line 64, ../sass/global/_type.scss */
+/* line 65, ../sass/global/_type.scss */
 hr {
   border-bottom: 1px solid;
   border-left: none;
@@ -484,19 +487,26 @@ hr {
 
 /* line 1, ../sass/global/_nav.scss */
 nav {
+  background-color: white;
   border-bottom: 1px solid #dadada;
   height: 4rem;
   position: fixed;
+  top: 0;
   width: 100%; }
 
-/* line 8, ../sass/global/_nav.scss */
+/* line 10, ../sass/global/_nav.scss */
 .logo {
   width: 32.20339%;
   float: left;
   margin-left: 1.69492%;
   margin-top: 1rem; }
-  /* line 12, ../sass/global/_nav.scss */
+  /* line 14, ../sass/global/_nav.scss */
   .logo img {
     height: 2rem; }
+
+/* partials used only on specific pages */
+/* line 1, ../sass/partials/_home.scss */
+.banner {
+  background-color: #f7f7f7; }
 
 /*# sourceMappingURL=style.minify.css.map */

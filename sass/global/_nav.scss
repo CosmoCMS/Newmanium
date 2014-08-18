@@ -1,7 +1,9 @@
 nav {
+    background-color: palette(gray, white);
     border-bottom: 1px solid palette(gray, mid-light);
     height: 4rem;
     position: fixed;
+    top: 0;
     width: 100%;
 }
 
