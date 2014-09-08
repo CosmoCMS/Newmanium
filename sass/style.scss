@@ -2,19 +2,19 @@
 @import "global/reset";
 @import "susy";
 
-html {
-    line-height: 1.5;
-}
     /*global imports to be used throughout the site */
-    @import "global/font-sizes";
     @import "global/media-queries";
     @import "global/color";
     @import "global/type";
-    @import "global/buttons";
     @import "global/margins-padding";
+    @import "global/buttons";
     @import "global/nav";
     @import "global/img";
+    @import "global/tables";
     @import "global/shame";
+
+
 
     /* partials used only on specific pages */
     @import "partials/home";
+    @import "partials/docs";

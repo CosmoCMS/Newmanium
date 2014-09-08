@@ -1,17 +1,231 @@
 nav {
-    background-color: palette(gray, white);
+    background-color: palette(gray, light);
     border-bottom: 1px solid palette(gray, mid-light);
     height: 4rem;
-    position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10000;
+
+    @media #{$bp-gamma} {
+        height: 5rem;
+    }
+
+    .logo {
+        @include span(7 of 12 after);
+        height: 4rem;
+
+        @media #{$bp-gamma} {
+            @include span(1.5 of 12 after);
+        }
+
+        .mobile {
+            display: block;
+            margin-left: .75rem;
+            margin-top: 1.3rem;
+            width: 6rem;
+
+            @media #{$bp-gamma} {
+                display: none;
+            }
+        }
+
+        .large {
+            display: none;
+
+            @media #{$bp-gamma} {
+                display: block;
+                margin-left: 0;
+                margin-top: 0;
+                width: 7rem;
+            }
+        }
+    }
+
+    .nav-collapse {
+        @include span(12 of 12 inside);
+        clip: rect(0 0 0 0);
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        text-align: right;
+        top: 0;
+        zoom: 1;
+
+        @media #{$bp-gamma} {
+            display: inline-block;
+            text-align: left;
+            top: 1.25rem;
+        }
+    }
 }
 
-.logo {
-    @include span(4 of 12 before);
-    margin-top: 1rem;
+nav .social {
+    @include span(4 of 12 after);
+    float: left;
+    margin-right: 0;
+    margin-top: 1.4rem;
+    padding-right: 6%;
+    position: absolute;
+    right: 7%;
+    text-align: right;
 
-    img {
-        height: 2rem;
+    @media #{$bp-gamma} {
+        margin-top: 2.2rem;
+        position: static;
+    }
+
+    i {
+        color: palette(brand, red);
+        font-size: 1.25em;
+        margin: 0 .5rem;
+        transition: color .15s ease-in;
+
+        &:hover {
+            color: palette(blue, light);
+        }
+    }
+}
+
+.nav-collapse ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    list-style: none;
+
+    @media #{$bp-gamma} {
+        display: inline-block;
+    }
+
+    li {
+        background-color: palette(gray, light);
+        display: block;
+        line-height: 3.5;
+        padding-right: 4%;
+        transition: all .15s ease-in;
+        width: 100%;
+
+        @media #{$bp-gamma} {
+            display: inline-block;
+            width: auto;
+        }
+
+        &:hover {
+            background-color: palette(gray, xlight);
+
+            @media #{$bp-gamma} {
+                background-color: transparent;
+            }
+
+            a {
+                color: palette(brand, red);
+            }
+        }
+
+        &:last-child {
+            border-bottom: 1px solid palette(gray, mid-light);
+
+            @media #{$bp-gamma} {
+                border-bottom: 0;
+            }
+        }
+
+        a {
+            color: palette(gray, mid);
+            display: block;
+            font-weight: 400;
+            transition: color .15s ease-in;
+
+            @media #{$bp-gamma} {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+.nav-collapse.opened {
+    max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+    color: palette(blue, light);
+    transition: color .15s ease;
+    user-select: none;
+
+    &:before {
+        content: "\f0c9";
+        font-family: "FontAwesome";
+        font-size: 1.5em;
+        position: absolute;
+        right: 4%;
+        top: 1rem;
+
+        @media #{$bp-gamma} {
+            top: 1.35rem;
+        }
+    }
+
+    &:hover {
+        color: palette(blue, dark);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .js .nav-collapse {
+        @include span(6.5 of 12 after);
+        margin-right: 0;
+    }
+
+    .js .nav-collapse.closed {
+        max-height: none;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* universal footer */
+
+footer {
+    background-color: palette(gray, white);
+    bottom: 0;
+    font-size: .85em;
+    padding: 1rem;
+    text-align: center;
+
+    @media #{$bp-gamma} {
+        padding: 1rem;
+    }
+
+    img.small {
+        display: inline-block;
+        margin-bottom: -.4rem;
+        width: 5rem;
+    }
+
+    a {
+        color: palette(brand, red);
+        transition: color .15s ease-in;
+
+        &:hover {
+            color: palette(blue, light);
+        }
+    }
+
+    i.fa-facebook, i.fa-twitter {
+        font-size: 1.25em;
+        margin: 0 .5rem;
+    }
+
+    p {
+        color: palette(gray, mid);
     }
 }

@@ -1,10 +1,21 @@
-/* padding and margins */
-$pad-alpha: .5rem;
-$pad-beta: 1rem;
-$pad-gamma: 1.5rem;
-$pad-delta: 2rem;
-$pad-epsilon: 2.5rem;
+/* setup easy margin/padding sass-map */
+$size: (
+    5: .313rem,
+    10: .625rem,
+    15: .938rem,
+    20: 1.25rem,
+    25: 1.563rem,
+    30: 1.875rem,
+);
 
+@function size($dimension) {
+  @if map-has-key($size, $dimension) {
+    @return map-get($size, $dimension);
+  }
+
+  @warn "Unknown `#{$key}` in $dimension.";
+  @return null;
+}
 
 
 /* general container to keep content within the correct width, 75rem = 1200px */

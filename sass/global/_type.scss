@@ -1,45 +1,72 @@
 $font-alpha: quicksand, sans-serif;
 
-html, body {
-    height: 100%;
-}
-
 body {
     color: palette(gray, dark);
     font-family: $font-alpha;
-    padding-top: 4rem;
+    height: 100%;
+    letter-spacing: -.025rem;
+    line-height: 1.5;
 }
 
 * {
     box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+}
+
 h1 {
-    font-size: 4.5em;
+    font-size: 2.75em;
+
+    @media #{$bp-beta} {
+        font-size: 3em;
+    }
+
+    @media #{$bp-gamma} {
+        font-size: 4.5em;
+    }
 }
 
 h2 {
-    font-size: 4em;
+    font-size: 2.25em;
+
+    @media #{$bp-beta} {
+        font-size: 2.75em;
+    }
+
+    @media #{$bp-gamma} {
+        font-size: 3em;
+    }
 }
 
 h3 {
-    font-size: 3.25em;
+    font-size: 2em;
+
+    @media #{$bp-beta} {
+        font-size: 2.25em;
+    }
+
+    @media #{$bp-gamma} {
+        font-size: 2.5em;
+    }
 }
 
 h4 {
-    font-size: 3em;
-}
+    font-size: 1.5em;
 
-h5 {
-    font-size: 2.5em;
-}
+    @media #{$bp-beta} {
+        font-size: 1.75em;
+    }
 
-h6 {
-    font-size: 2em;
+    @media #{$bp-gamma} {
+        font-size: 2em;
+    }
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.1em;
+    letter-spacing: -.025rem;
 }
 
 small {
