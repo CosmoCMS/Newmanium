@@ -1,112 +1,59 @@
-<!DOCTYPE html>
-<html ng-app="app">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <title>Cosmo CMS</title>
-        <link href="css/style.minify.css" rel="stylesheet">
-        <link rel="icon" type="image/png" href="img/logo.png">
-        <script src="//use.edgefonts.net/quicksand:n3,i3,n4,i4,n7,i7.js"></script>
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Remove upon installing Cosmo -->
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-        <script src="https://code.angularjs.org/1.2.19/angular-animate.js"></script>
-        <script src="js/responsive-nav.min.js"></script>
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="container">
-                    <div class="logo">
-                        <img class="mobile" src="img/logo-small.svg">
-                        <img class="large" src="img/logo.svg">
-                    </div>
-                    <div class="nav-collapse">
-                        <ul>
-                            <li><a href="#">download</a></li>
-                            <li><a href="#">features</a></li>
-                            <li><a href="#">docs</a></li>
-                            <li><a href="#">blog</a></li>
-                        </ul>
-                    </div>
-                    <div class="social">
-                        <a href="http://www.facebook.com/cosmocms"><i class="fa fa-facebook"></i></a>
-                        <a href="http://www.twitter.com/cosmocms"><i class="fa fa-twitter"></i></a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <section class="banner" role="homepage banner">
-            <div class="container">
-                <h1>the <span class="highlight">live editing</span> cms</h1> <h1 class="sub">(beta)</h1>
-                <p class="overview">built on php and angularjs, cosmo is one of the first <span class="highlight">opensource,</span> live editing, <span class="highlight">mobile first</span> and responsive-minded content management system.</p>
-                <button class="download hide"><i class="fa fa-download"></i>Download Now</button>
-                <p class="hide">or</p>
-                <button><i class="fa fa-github"></i>View on Github</button>
-            </div>
-        </section>
-        <section class="feature-highlight--3">
-            <div class="container">
-                <div class="feature">
-                    <i class="fa fa-tachometer"></i>
-                    <h4>Site</h4> <h4 class="highlight">Optimization</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam turpis dolor, scelerisque vitae blandit ut.</p>
-                </div>
-                <div class="feature">
-                    <i class="fa fa-pencil-square-o"></i>
-                    <h4>Live</h4> <h4 class="highlight">Editing</h4>
-                    <p>Sed commodo eros a nisi ornare, sed fermentum risus feugiat. Curabitur a nisi vel elit faucibus facilisis. Nam eget arcu vulputate.</p>
-                </div>
-                <div class="feature">
-                    <i class="fa fa-html5"></i>
-                    <h4>Latest</h4> <h4 class="highlight">Technology</h4>
-                    <p>Suspendisse quis odio in sapien ullamcorper aliquet at quis diam. Suspendisse egestas varius leo vitae porta.</p>
-                </div>
-            </div>
-        </section>
-        <section class="featured-highlight--wide-left">
-            <div class="container">
-                <div class="screenshot">
-                    <img src="img/highlight.png">
-                </div>
-                <div class="description">
-                    <h4>Edit live</h4> <h4 class="highlight">on your site</h4>
-                    <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
-                    <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
-                </div>
-            </div>
-        </section>
-        <section class="featured-highlight--single">
-            <div class="container">
-                <h2>Annual Cost: $0, Nada, Nothin'</h2>
-                <p>We won't <i>Yada Yada</i> our goals, we are and always will be 100% MIT Licensed open source on all code, modules and themes developed by the core team for Cosmo.</p>
-            </div>
-        </section>
-        <section class="featured-highlight--wide-right">
-            <div class="container">
-                <div class="description">
-                    <h4>Automated</h4> <h4 class="highlight">Responsive Images</h4>
-                    <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
-                    <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
-                </div>
-                <div class="screenshot">
-                    <img src="img/highlight2.png">
-                </div>
-            </div>
-        </section>
-        <footer class="container">
-            <p><img class="small" src="img/logo-small.svg"> is developed with <i class="fa fa-heart"></i> in Orlando Florida by <a href="http://www.twitter.com/jordandunn">@jordandunn</a> and <a href="http://www.twitter.com/jamesdunn">@jamesdunn</a></p>
-            <p>Code licensed under MIT, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0.</a></p>
-                <p><a href="http://www.facebook.com/cosmocms"><i class="fa fa-facebook"></i></a>
-                <a href="http://www.twitter.com/cosmocms"><i class="fa fa-twitter"></i></a>
-                </p>
-        </footer>
-        <script>
-            var nav = responsiveNav(".nav-collapse", {
-                label: "",
-            });
-        </script>
-    </body>
-</html>
+<div ng-include="themes/Newmanium/partials/header.html"></div>
+<section class="banner" role="homepage banner">
+    <div class="container">
+        <h1 cosmo="header"></h1>
+        <p cosmo="subheader" class="overview"></p>
+        <div cosmo="download-section"></div>
+    </div>
+</section>
+<div cs-content="body"></div>
+<section class="feature-highlight--3">
+    <div class="container">
+        <div class="feature">
+            <i class="fa fa-tachometer"></i>
+            <h4>Site</h4> <h4 class="highlight">Optimization</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam turpis dolor, scelerisque vitae blandit ut.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-pencil-square-o"></i>
+            <h4>Live</h4> <h4 class="highlight">Editing</h4>
+            <p>Sed commodo eros a nisi ornare, sed fermentum risus feugiat. Curabitur a nisi vel elit faucibus facilisis. Nam eget arcu vulputate.</p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-html5"></i>
+            <h4>Latest</h4> <h4 class="highlight">Technology</h4>
+            <p>Suspendisse quis odio in sapien ullamcorper aliquet at quis diam. Suspendisse egestas varius leo vitae porta.</p>
+        </div>
+    </div>
+</section>
+<section class="featured-highlight--wide-left">
+    <div class="container">
+        <div class="screenshot">
+            <img src="img/highlight.png">
+        </div>
+        <div class="description">
+            <h4>Edit live</h4> <h4 class="highlight">on your site</h4>
+            <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
+            <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
+        </div>
+    </div>
+</section>
+<section class="featured-highlight--single">
+    <div class="container">
+        <h2>Annual Cost: $0, Nada, Nothin'</h2>
+        <p>We won't <i>Yada Yada</i> our goals, we are and always will be 100% MIT Licensed open source on all code, modules and themes developed by the core team for Cosmo.</p>
+    </div>
+</section>
+<section class="featured-highlight--wide-right">
+    <div class="container">
+        <div class="description">
+            <h4>Automated</h4> <h4 class="highlight">Responsive Images</h4>
+            <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
+            <p>Proin aliquam nisi orci, vel fermentum nunc adipiscing nec. Suspendisse quam nisl, mattis in metus nec, blandit suscipit lorem. Morbi dui nulla, tempor vitae libero a, tincidunt scelerisque risus. Nam commodo tincidunt mollis. Fusce et scelerisque ligula.</p>
+        </div>
+        <div class="screenshot">
+            <img src="img/highlight2.png">
+        </div>
+    </div>
+</section>
+<div ng-include="themes/Newmanium/partials/footer.html"></div>
