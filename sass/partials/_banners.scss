@@ -1,0 +1,83 @@
+.banner--lrg {
+    background: center center no-repeat;
+    background-size: cover;
+    height: 30rem;
+    letter-spacing: -.05rem;
+    position: relative;
+    text-align: center;
+
+    @media #{$bp-beta} {
+        background: center center no-repeat fixed;
+        background-size: cover;
+        height: 100%;
+    }
+
+    h1 {
+        color: palette(gray, light);
+        display: inline-block;
+        font-weight: 400;
+        margin-bottom: size(20);
+    }
+
+    p {
+        color: palette(gray, light);
+        font-size: 1.25em;
+        margin-bottom: size(30);
+
+        @media #{$bp-beta} {
+            font-size: 2em;
+        }
+    }
+
+    span {
+        display: none;
+
+        @media #{$bp-gamma} {
+            color: palette(gray, light);
+            display: inline-block;
+            margin: 0 size(10);
+        }
+    }
+
+    .download {
+        @extend %button;
+        display: none;
+
+        @media #{$bp-gamma} {
+            background-color: palette(blue, light);
+            border: 0;
+            color: palette(gray, white);
+            display: inline-block;
+            font-size: 1.1em;
+
+            &:hover {
+                background-color: palette(blue, dark);
+
+                i {
+                    color: palette(blue, light);
+                }
+            }
+        }
+    }
+
+    .github {
+        @extend .download;
+        background-color: palette(gray, mid--light);
+        color: palette(blue, dark);
+    }
+
+    .github-disclaimer {
+        display: none;
+
+        @media #{$bp-gamma} {
+            display: block;
+            font-size: 1em;
+            margin-top: 2rem;
+        }
+    }
+
+    .intro {
+        @extend .center;
+        @extend .container;
+    }
+}

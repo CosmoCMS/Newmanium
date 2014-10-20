@@ -1,0 +1,117 @@
+.features--buttons {
+    margin: size(30) 0 size(20) 0;
+    text-align: center;
+
+    button {
+        @extend %button;
+        border: 1px solid palette(blue, mid);
+        border-radius: size(5);
+        color: palette(blue, mid);
+        display: inline-block;
+        margin: 0 size(10) size(10) 0;
+        padding: size(10) size(20);
+        width: 100%;
+
+        @media #{$bp-alpha} {
+            width: auto;
+        }
+
+        &:focus {
+            background-color: palette(blue, dark);
+        }
+
+        &:hover {
+            background-color: palette(blue, light);
+            border: 1px solid palette(blue, light);
+            color: palette(gray, light);
+        }
+    }
+
+    .active {
+        background-color: palette(blue, dark);
+        border: 1px solid palette(blue, dark);
+        color: palette(gray, light);
+
+        &:hover {
+            background-color: palette(blue, dark);
+            border: 1px solid palette(blue, dark);
+            cursor: default;
+        }
+    }
+}
+
+.features--1-up {
+    background-color: palette(gray, light);
+    padding: size(30) 0;
+
+    h4 {
+        color: palette(gray, dark);
+        font-weight: 200;
+        text-align: center;
+    }
+
+    .description {
+        @include span(12 of 12 inside);
+
+        @media #{$bp-beta} {
+            @include span(6 of 12 after);
+            padding-right: size(30);
+        }
+    }
+
+    .screenshot {
+        @include span(12 of 12 inside);
+        padding: 0;
+
+        @media #{$bp-beta} {
+            @include span(6 of 12 after);
+            margin-right: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.features--3-up {
+    padding: size(30) 0;
+
+    .feature {
+        @include span(12 of 12 inside);
+        margin-bottom: size(30);
+        text-align: center;
+
+        @media #{$bp-beta} {
+            @include span(4 of 12 after);
+            margin-bottom: 0;
+
+            &:last-child {
+                border-right: 0;
+                margin-right: 0;
+            }
+        }
+
+        h4 {
+            color: palette(gray, dark);
+            display: block;
+            font-weight: 200;
+            margin: size(15) 0;
+            text-align: left;
+        }
+
+        i {
+            background-color: palette(blue, light);
+            border-radius: 100%;
+            color: palette(gray, light);
+            font-size: 2.5em;
+            padding: size(20);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+}

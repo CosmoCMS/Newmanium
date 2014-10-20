@@ -1,20 +1,31 @@
-/* Universal imports not to be included in the theme refrence */
-@import "global/reset";
-@import "susy";
+@import "global/normalize"; // remove unncessary defaults by browsers
+@import "global/grid/susy"; // grid system susy
 
-    /*global imports to be used throughout the site */
+body, html {
+    height: 100%;
+}
+.cosmo-theme {
+    @import "global/z-index";
     @import "global/media-queries";
-    @import "global/color";
-    @import "global/type";
     @import "global/margins-padding";
+    @import "global/color";
+    @import "global/fonts";
+    @import "global/type";
+    @import "global/tables";
+    @import "global/lists";
+    @import "global/img";
     @import "global/buttons";
     @import "global/nav";
-    @import "global/img";
-    @import "global/tables";
-    @import "global/shame";
 
 
-
-    /* partials used only on specific pages */
     @import "partials/home";
     @import "partials/docs";
+    @import "partials/banners";
+    @import "partials/features";
+
+
+
+    @import "global/shame";
+
+    font-family: $font-alpha;
+}

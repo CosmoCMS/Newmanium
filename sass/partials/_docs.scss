@@ -1,96 +1,14 @@
-.banner--inner {
-    @extend .banner;
-    background-color: palette(blue, dark);
-    font-size: .8rem;
-    text-align: left;
-    padding: size(20);
-
-    @media #{$bp-epsilon} {
-        padding: 1.25rem 0;
-    }
-
-    .overview {
-        color: palette(gray, mid-light);
-        display: block;
-    }
-
-    .sub {
-        color: palette(blue, light);
-    }
-}
-
 .docs {
-    padding: size(20);
-
-    @media #{$bp-epsilon} {
-        padding: 2rem 0 0 0;
-    }
-}
-
-.docs-menu {
-    @include span(12 of 12 inside);
-    background-color: transparent;
-    border: 0;
-    height: auto;
-    padding: 0;
-    margin-bottom: size(30);
-
-    @media #{$bp-beta} {
-        @include span(3 of 12 after);
-        margin-bottom: 0;
-    }
-
-
-    .active {
-        font-weight: 600;
-    }
-
-    ul {
-        background-color: palette(gray, light);
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        a {
-            cursor: pointer;
-            display: block;
-            padding: size(10) size(15);
-            transition: background-color .15s ease, color .15s ease;
-
-            &:hover {
-                background-color: palette(gray, xlight);
-            }
-        }
-    }
-}
-
-.docs-menu li {
-
-    ul {
-        padding-bottom: size(5);
-        padding-top: size(5);
-
-        li {
-
-            a {
-                background-color: palette(blue, light-mid);
-                padding-left: size(30);
-
-                &:hover {
-                    background-color: palette(blue, dark);
-                    color: palette(gray, white);
-                }
-            }
-        }
-    }
+    background-color: palette(gray, xlight);
+    padding: size(30) 0;
 }
 
 .docs-view {
     @include span(12 of 12 inside);
-    padding: 0 size(20);
+    padding: 0;
 
-    @media #{$bp-beta} {
-        @include span(9 of 12 after);
+    @media #{$bp-gamma} {
+        @include span(10 of 12 after);
         margin-right: 0;
     }
 

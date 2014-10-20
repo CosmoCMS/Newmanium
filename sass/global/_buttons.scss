@@ -1,25 +1,16 @@
 %button {
     background-color: transparent;
     border: 1px solid palette(blue, dark);
+    border-radius: size(5);
     color: palette(blue, dark);
     display: block;
-    font-weight: 200;
+    font-family: $font-alpha;
+    font-weight: 400;
     margin: 0 auto;
     outline: none;
-    padding: .5rem .75rem;
+    padding: size(20) size(30);
     text-align: center;
-    text-transform: lowercase;
     transition: all .15s ease-in;
-
-    @media #{$bp-beta} {
-        display: inline-block;
-        margin: 0 size(10) size(25);
-        padding: 1rem 1.5rem;
-
-        &:last-child {
-            margin-right: 0;
-        }
-    }
 
     i {
         color: palette(blue, dark);

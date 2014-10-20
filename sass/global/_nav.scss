@@ -1,194 +1,148 @@
-nav {
+header {
     background-color: palette(gray, light);
-    border-bottom: 1px solid palette(gray, mid-light);
-    height: 4rem;
-    top: 0;
-    width: 100%;
-    z-index: 10000;
+    border-bottom: 1px solid palette(gray, mid--light);
+    height: auto;
+    padding-bottom: .5rem;
 
-    @media #{$bp-gamma} {
+    @media #{$bp-beta} {
         height: 5rem;
+        padding-bottom: 0;
     }
 
     .logo {
-        @include span(7 of 12 after);
-        height: 4rem;
+        @include span(12 of 12 after);
+        margin-bottom: .5rem;
+        margin-right: 0;
 
-        @media #{$bp-gamma} {
-            @include span(1.5 of 12 after);
+        @media #{$bp-beta} {
+            @include span(4 of 12 after);
+            margin-bottom: 0;
         }
 
-        .mobile {
-            display: block;
-            margin-left: .75rem;
-            margin-top: 1.3rem;
-            width: 6rem;
+        img {
+            height: 5rem;
+            width: 100%;
 
-            @media #{$bp-gamma} {
-                display: none;
+            @media #{$bp-beta} {
+                width: auto;
             }
-        }
-
-        .large {
-            display: none;
-
-            @media #{$bp-gamma} {
-                display: block;
-                margin-left: 0;
-                margin-top: 0;
-                width: 7rem;
-            }
-        }
-    }
-
-    .nav-collapse {
-        @include span(12 of 12 inside);
-        clip: rect(0 0 0 0);
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        text-align: right;
-        top: 0;
-        zoom: 1;
-
-        @media #{$bp-gamma} {
-            display: inline-block;
-            text-align: left;
-            top: 1.25rem;
         }
     }
 }
 
-nav .social {
-    @include span(4 of 12 after);
-    float: left;
+nav {
+    @include span(12 of 12 after);
+    border-top: 1px solid palette(gray, mid--light);
     margin-right: 0;
-    margin-top: 1.4rem;
-    padding-right: 6%;
-    position: absolute;
-    right: 7%;
-    text-align: right;
+    padding-top: 1.75rem;
+    text-align: center;
 
-    @media #{$bp-gamma} {
-        margin-top: 2.2rem;
-        position: static;
+    @media #{$bp-beta} {
+        @include span(8 of 12 after);
+        border-top: 0;
+        margin-right: 0;
+        text-align: right;
     }
 
-    i {
-        color: palette(brand, red);
-        font-size: 1.25em;
-        margin: 0 .5rem;
-        transition: color .15s ease-in;
-
-        &:hover {
-            color: palette(blue, light);
-        }
-    }
-}
-
-.nav-collapse ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
-    list-style: none;
-
-    @media #{$bp-gamma} {
+    ul {
         display: inline-block;
-    }
+        margin: 0;
+        padding: 0;
 
-    li {
-        background-color: palette(gray, light);
-        display: block;
-        line-height: 3.5;
-        padding-right: 4%;
-        transition: all .15s ease-in;
-        width: 100%;
-
-        @media #{$bp-gamma} {
+        li {
             display: inline-block;
-            width: auto;
-        }
+            list-style: none;
+            margin-right: size(30);
 
-        &:hover {
-            background-color: palette(gray, xlight);
-
-            @media #{$bp-gamma} {
-                background-color: transparent;
+            &:last-child {
+                margin-right: 0;
             }
 
             a {
-                color: palette(brand, red);
-            }
-        }
+                color: palette(blue, dark);
+                display: block;
+                font-weight: 400;
+                min-height: 2.1rem;
 
-        &:last-child {
-            border-bottom: 1px solid palette(gray, mid-light);
-
-            @media #{$bp-gamma} {
-                border-bottom: 0;
-            }
-        }
-
-        a {
-            color: palette(gray, mid);
-            display: block;
-            font-weight: 400;
-            transition: color .15s ease-in;
-
-            @media #{$bp-gamma} {
-                display: inline-block;
+                &:hover {
+                    color: palette(blue, light);
+                }
             }
         }
     }
 }
 
-.nav-collapse.opened {
-    max-height: 9999px;
-}
-
-.disable-pointer-events {
-  pointer-events: none !important;
-}
-
-.nav-toggle {
-    color: palette(blue, light);
-    transition: color .15s ease;
-    user-select: none;
-
-    &:before {
-        content: "\f0c9";
-        font-family: "FontAwesome";
-        font-size: 1.5em;
-        position: absolute;
-        right: 4%;
-        top: 1rem;
-
-        @media #{$bp-gamma} {
-            top: 1.35rem;
-        }
-    }
+.featured {
+    background-color: palette(blue, light);
+    border-radius: size(5);
+    margin-top: - size(10);
+    transition: .15s ease-in-out;
 
     &:hover {
-        color: palette(blue, dark);
+        background-color: palette(blue, dark);
+
+        a {
+            color: palette(gray, light);
+        }
+    }
+
+    a {
+        color: palette(gray, light);
+        padding: size(5) size(10);
     }
 }
 
-@media screen and (min-width: 1024px) {
+.nav--sidebar {
+    @include span(12 of 12 inside);
+    font-size: .9rem;
+    padding: 0;
+    text-align: left;
 
-    .js .nav-collapse {
-        @include span(6.5 of 12 after);
-        margin-right: 0;
+    p {
+        color: palette(blue, dark);
+        display: block;
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: size(10);
     }
 
-    .js .nav-collapse.closed {
-        max-height: none;
+    @media #{$bp-gamma} {
+        @include span(2 of 12 after);
+        border-right: 1px solid palette(gray, light);
+
+        ul {
+
+            li {
+                display: block;
+                margin-bottom: size(10);
+                margin-right: 0;
+
+                a {
+                    font-weight: 200;
+                    margin-bottom: 0;
+                    text-align: left;
+                }
+
+                ul {
+                    margin-left: size(20);
+                    margin-top: size(10);
+                }
+            }
+
+        }
     }
 
-    .nav-toggle {
-        display: none;
+    .active {
+        background-color: palette(gray, light);
+        border-radius: size(5);
+        margin-top: 0;
+        padding: size(5) size(10);
+
+        &:hover {
+            background-color: palette(gray, light);
+            color: palette(blue, dark);
+            cursor: default;
+        }
     }
 }
 
@@ -197,15 +151,11 @@ nav .social {
 footer {
     background-color: palette(gray, white);
     bottom: 0;
-    font-size: .85em;
-    padding: 1rem;
+    font-size: .85rem;
+    padding: size(30) 0;
     text-align: center;
 
-    @media #{$bp-gamma} {
-        padding: 1rem;
-    }
-
-    img.small {
+    img {
         display: inline-block;
         margin-bottom: -.4rem;
         width: 5rem;
@@ -221,11 +171,15 @@ footer {
     }
 
     i.fa-facebook, i.fa-twitter {
-        font-size: 1.25em;
         margin: 0 .5rem;
     }
 
     p {
         color: palette(gray, mid);
+        margin-bottom: size(10);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
