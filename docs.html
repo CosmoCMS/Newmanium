@@ -1,96 +1,13 @@
-<!DOCTYPE html>
-<html ng-app="app">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <title>Cosmo CMS</title>
-        <link href="css/style.minify.css" rel="stylesheet">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Remove upon installing Cosmo -->
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-        <script src="https://code.angularjs.org/1.2.19/angular-animate.js"></script>
-        <script src="js/responsive-nav.min.js"></script>
-        <script>angular.module('app', [])
-.controller('bodyCtrl', function(){});</script>
-    </head>
-    <body class="cosmo-theme" ng-controller="bodyCtrl">
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <img src="img/logo.svg">
-                </div>
-                <nav>
-                    <ul>
-                        <li class="featured"><a href="#">Demo</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="http://www.facebook.com/cosmocms"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="http://www.twitter.com/cosmocms"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <section class="docs">
-            <div class="container">
-                <nav class="nav--sidebar">
-                    <ul>
-                        <p>Getting Started</p>
-                        <li><a>Install cosmo</a></li>
-                        <li><a>Using cosmo</a>
-                            <ul>
-                                <li><a>Editing Pages</a></li>
-                                <li><a>WYSIWYG</a></li>
-                                <li><a class="active">Media Gallery</a></li>
-                                <li><a>Modules</a></li>
-                                <li><a>Blocks</a></li>
-                                <li><a>Videos</a></li>
-                            </ul>
-                        </li>
-                        <p>Theming</p>
-                    </ul>
-                </nav>
-                <div class="docs-view">
-                    <h4>How to install cosmo</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam turpis dolor, scelerisque vitae blandit ut.</p>
-                    <div class="table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Testing Headline</th>
-                                    <th>Testing Headline</th>
-                                    <th>Testing Headline</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>How well will it work if I just adjust this one table? HMM?</td>
-                                    <td>testing table</td>
-                                    <td>testing table</td>
-                                </tr>
-                                <tr>
-                                    <td>testing table</td>
-                                    <td>testing table</td>
-                                    <td>testing table</td>
-                                </tr>
-                                <tr>
-                                    <td>testing table</td>
-                                    <td>testing table</td>
-                                    <td>testing table</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <div class="container">
-                <p><img src="img/logo-small.svg"> is developed with <i class="fa fa-heart"></i> in Orlando Florida by <a href="http://www.twitter.com/jordandunn">@jordandunn</a> and James Dunn</p>
-                <p>Code licensed under MIT, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0.</a></p>
-                    <p><a href="http://www.facebook.com/cosmocms"><i class="fa fa-facebook"></i></a>
-                    <a href="http://www.twitter.com/cosmocms"><i class="fa fa-twitter"></i></a>
-                    </p>
-            </div>
-        </footer>
-    </body>
-</html>
+<div ng-include="'themes/Newmanium/partials/header.html'"></div>
+<section class="content-with-sidebar">
+    <div class="container">
+        <nav class="nav--sidebar">
+            <ul cs-menu="secondary"></ul>
+        </nav>
+        <div class="content-with-sidebar--view">
+            <h4 cs-content="header"></h4>
+            <div cs-content="body"></div>
+        </div>
+    </div>
+</section>
+<div ng-include="'themes/Newmanium/partials/footer.html'"></div>

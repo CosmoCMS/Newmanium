@@ -1,0 +1,36 @@
+.tooltip {
+    display: inline;
+    font-weight: 600;
+    position: relative;
+
+    &:hover {
+        color: palette(gray, dark);
+        cursor: default;
+
+        &:before {
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid palette(blue, light);
+            border-top: 10px solid transparent;
+            bottom: size(20);
+            content: "";
+            left: size(5);
+            position: absolute;
+            z-index:z(moderate);
+        }
+
+        &:after {
+            background-color: palette(blue, light);
+            border-radius: size(5);
+            bottom: 1.75rem;
+            color: palette(gray, light);
+            content: attr(tooltip);
+            font-size: .9em;
+            font-weight: 200;
+            left: -6rem;
+            padding: size(10) size(15);
+            position: absolute;
+            width: 12rem;
+            z-index: z(maximum);
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<div ng-include="'themes/Newmanium/partials/header.html'"></div>
+<section class="content-with-sidebar">
+    <div class="container">
+        <nav class="nav--sidebar">
+            <ul cs-menu="secondary"></ul>
+        </nav>
+        <div class="content-with-sidebar--view" ng-controller="newmaniumSearchCtrl">
+            <p class="add-on--title" cs-content="header"></p>
+            <input class="search" placeholder="search" ng-model="search">
+            <div class="content-preview" ng-repeat="item in items">
+                <h4>{{item.title}}</h4>
+                <span class="tooltip" tooltip="Has been updated in the last 90 days"><i class="fa fa-circle pass"></i></span>
+                <p>{{item.description}}</p>
+                <div class="screenshots">
+                    <div class="images">
+                        <img ng-repeat="image in item.images" ng-src="{{image}}">
+                    </div>
+                </div>
+                <a ng-href="{{item.download}}"><button class="cta"><i class="fa fa-arrow-circle-down"></i> Download</button></a>
+                <a ng-href="{{item.github}}"><button class="cta"><i class="fa fa-github"></i> View on Github</button></a>
+            </div>
+        </div>
+    </div>
+</section>
+<div ng-include="'themes/Newmanium/partials/footer.html'"></div>

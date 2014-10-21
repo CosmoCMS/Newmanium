@@ -1,144 +1,102 @@
-<!DOCTYPE html>
-<html ng-app="app">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-        <title>Cosmo CMS</title>
-        <link href="css/style.minify.css" rel="stylesheet">
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Remove upon installing Cosmo -->
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-        <script src="https://code.angularjs.org/1.2.19/angular-animate.js"></script>
-        <script src="js/responsive-nav.min.js"></script>
-        <script>angular.module('app', [])
-.controller('bodyCtrl', function(){});</script>
-    </head>
-    <body class="cosmo-theme" ng-controller="bodyCtrl">
-        <header>
-            <div class="container">
-                <div class="logo">
-                    <img src="img/logo.svg">
-                </div>
-                <nav>
-                    <ul>
-                        <li class="featured"><a href="#">Demo</a></li>
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Help</a></li>
-                        <li><a href="http://www.facebook.com/cosmocms"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="http://www.twitter.com/cosmocms"><i class="fa fa-twitter"></i></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <section class="banner--lrg" role="homepage banner" style="background-image: url(img/banner-img.jpg)">
-            <div class="intro">
-                <h1>The live editing CMS</h1>
-                <p>Built on php & angularjs, cosmo is one of the first opensource, live editing, mobile first & responsive-minded content management systems.</p>
-                <button class="download"><i class="fa fa-download"></i>Download (v1.0.0beta)</button>
-                <span>or</span>
-                <button class="github"><i class="fa fa-github"></i>*Fork on Github</button>
-                <p class="github-disclaimer">*Forking files on github pull from a nightly build and are not recommended for use in a production environment</p>
-            </div>
-        </section>
-        <section class="features--3-up">
-            <div class="container">
-                <div class="feature">
-                    <i class="fa fa-rocket"></i>
-                    <h4><strong>Site</strong> Optimization</h4>
-                    <p>With cosmo, your site will auto minify, combine and cache all css and javascript on your site, allowing it to increase in speed with minimal code on the developers end.</p>
-                </div>
-                <div class="feature">
-                    <i class="fa fa-files-o"></i>
-                    <h4><strong>Version</strong> Control</h4>
-                    <p>When you forget what changes have been made to a document, cosmo will help you remember by showing you the changes made, highlighting additions and deletions to help you see the history of your document.</p>
-                </div>
-                <div class="feature">
-                    <i class="fa fa-code"></i>
-                    <h4><strong>Custom</strong> WYSIWYG</h4>
-                    <p>Our custom WYSIWYG editor, built with HTML5 allows the insertion of html blocks of codes (directives) along and quick insertion/editing of images, galleries, movies and more.</p>
-                </div>
-            </div>
-        </section>
-        <section class="features--1-up">
-            <div class="container">
-                <div class="features--buttons">
-                    <button ng-class="{active: panel=='panel1'}" ng-init="panel='panel1'" ng-click="panel='panel1'">Live Editing</button>
-                    <button ng-class="{active: panel=='panel2'}" ng-click="panel='panel2'">Responsive Images</button>
-                    <button ng-class="{active: panel=='panel3'}" ng-click="panel='panel3'">Web App</button>
-                    <button ng-class="{active: panel=='panel4'}" ng-click="panel='panel4'">Version Control</button>
-                    <button ng-class="{active: panel=='panel5'}" ng-click="panel='panel5'">Insert Directives</button>
-                </div>
-            </div>
-            <div class="container" ng-show="panel=='panel1'">
-                <h4><strong>Live</strong> Editing</h4>
-                <div class="description">
-                    <p>Editing the content on your website shouldn’t require menus, submenus and "previews" of your webpage, instead it should be a fluid and live editing experience. Cosmo allows you to not only edit text, but insert images, galleries, videos and even blocks of html code directly into your site.</p>
-                    <p>Editable regions on your site can be controlled by the developer to have specific areas for editing to help control the design and continuity, or allow the user to input html visually into the site, allowing them to build out pages with custom layouts live on the site.</p>
-                </div>
-                <div class="screenshot">
-                    <img src="img/live-editing.gif">
-                </div>
-            </div>
+<div ng-include="'themes/Newmanium/partials/header.html'"></div>
+<section class="banner--lrg" role="homepage banner" style="background-image: url(img/banner-img.jpg)">
+    <div class="intro">
+        <h1 cs-content="header"></h1>
+        <p cs-content="subheader"></p>
+        <button class="download"><i class="fa fa-download"></i>Download (v1.0.0beta)</button>
+        <span>or</span>
+        <button class="github"><i class="fa fa-github"></i>*Fork on Github</button>
+        <p class="github-disclaimer">*Forking files on github pull from a nightly build and are not recommended for use in a production environment</p>
+    </div>
+</section>
+<section class="features--3-up">
+    <div class="container">
+        <div class="feature">
+            <i class="fa fa-rocket"></i>
+            <h4 cs-content="firstHeader"></h4>
+            <p cs-content="firstText"></p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-files-o"></i>
+            <h4 cs-content="secondHeader"></h4>
+            <p cs-content="secondText"></p>
+        </div>
+        <div class="feature">
+            <i class="fa fa-code"></i>
+            <h4 cs-content="thirdHeader"></h4>
+            <p cs-content="thirdText"></p>
+        </div>
+    </div>
+</section>
+<section class="features--1-up">
+    <div class="container">
+        <div class="features--buttons">
+            <button ng-class="{active: panel=='panel1'}" ng-init="panel='panel1'" ng-click="panel='panel1'">Live Editing</button>
+            <button ng-class="{active: panel=='panel2'}" ng-click="panel='panel2'">Responsive Images</button>
+            <button ng-class="{active: panel=='panel3'}" ng-click="panel='panel3'">Web App</button>
+            <button ng-class="{active: panel=='panel4'}" ng-click="panel='panel4'">Version Control</button>
+            <button ng-class="{active: panel=='panel5'}" ng-click="panel='panel5'">Insert Directives</button>
+        </div>
+    </div>
+    <div class="container" ng-show="panel=='panel1'">
+        <h4><strong>Live</strong> Editing</h4>
+        <div class="description">
+            <p>Editing the content on your website shouldn’t require menus, submenus and "previews" of your webpage, instead it should be a fluid and live editing experience. Cosmo allows you to not only edit text, but insert images, galleries, videos and even blocks of html code directly into your site.</p>
+            <p>Editable regions on your site can be controlled by the developer to have specific areas for editing to help control the design and continuity, or allow the user to input html visually into the site, allowing them to build out pages with custom layouts live on the site.</p>
+        </div>
+        <div class="screenshot">
+            <img src="img/live-editing.gif">
+        </div>
+    </div>
 
-            <div class="container" ng-show="panel=='panel2'">
-                <h4><strong>Responsive</strong> Images</h4>
-                <div class="description">
-                    <p>Image handling shouldn’t be difficult or frustrating. It should just work, and continue to work when you hand it off to your client. Cosmo takes out the guess work of responsive images and allows you to upload images up to 5mb, will automatically resize the image into 4 sizes - 2048px (retina displays), 1024px, 512px and 320px and use the correct image for the correct device.</p>
-                </div>
-                <div class="screenshot">
-                    <img src="img/responsive-images.png">
-                </div>
-            </div>
+    <div class="container" ng-show="panel=='panel2'">
+        <h4><strong>Responsive</strong> Images</h4>
+        <div class="description">
+            <p>Image handling shouldn’t be difficult or frustrating. It should just work, and continue to work when you hand it off to your client. Cosmo takes out the guess work of responsive images and allows you to upload images up to 5mb, will automatically resize the image into 4 sizes - 2048px (retina displays), 1024px, 512px and 320px and use the correct image for the correct device.</p>
+        </div>
+        <div class="screenshot">
+            <img src="img/responsive-images.png">
+        </div>
+    </div>
 
-            <div class="container" ng-show="panel=='panel3'">
-                <h4><strong>Web</strong> App</h4>
-                <div class="description">
-                    <p>With AngularJS being at the core of cosmo,  every installation becomes a single page web "app". This allows for faster page loads by only fetching the content that's been updated on a page, no more need to re-load things like html and javascript. Being a single page app also allows for transitions, allowing your page to fade in/out or slide in/out much like on mobile apps. </p>
-                    <p>Prefetching also is built directly into the site. This allows the website to begin loading content that the user will be heading towards, to help load times and create less interruptions for the user</p>
-                </div>
-                <div class="screenshot">
-                    <img src="img/page-transition.gif">
-                </div>
-            </div>
+    <div class="container" ng-show="panel=='panel3'">
+        <h4><strong>Web</strong> App</h4>
+        <div class="description">
+            <p>With AngularJS being at the core of cosmo,  every installation becomes a single page web "app". This allows for faster page loads by only fetching the content that's been updated on a page, no more need to re-load things like html and javascript. Being a single page app also allows for transitions, allowing your page to fade in/out or slide in/out much like on mobile apps. </p>
+            <p>Prefetching also is built directly into the site. This allows the website to begin loading content that the user will be heading towards, to help load times and create less interruptions for the user</p>
+        </div>
+        <div class="screenshot">
+            <img src="img/page-transition.gif">
+        </div>
+    </div>
 
-            <div class="container" ng-show="panel=='panel4'">
-                <h4><strong>Version</strong> Control</h4>
-                <div class="description">
-                    <p>Revisions to a document shouldn't be a guessing game. With cosmo you can quickly and easily tell who and when the document was edited, whether it's published along with the ability to see the exact deletions and additions made since the previous save. </p>
-                    <p>If you're familiar with a github or other git based systems you'll be right at home, seeing deletions marked in red, and additions marked in green. Add new code to the page? Not a problem, the revision manager will mark any new additions or deletions of code to the page as well.</p>
-                </div>
-                <div class="screenshot">
-                    <img src="img/revisions.jpg">
-                </div>
-            </div>
+    <div class="container" ng-show="panel=='panel4'">
+        <h4><strong>Version</strong> Control</h4>
+        <div class="description">
+            <p>Revisions to a document shouldn't be a guessing game. With cosmo you can quickly and easily tell who and when the document was edited, whether it's published along with the ability to see the exact deletions and additions made since the previous save. </p>
+            <p>If you're familiar with a github or other git based systems you'll be right at home, seeing deletions marked in red, and additions marked in green. Add new code to the page? Not a problem, the revision manager will mark any new additions or deletions of code to the page as well.</p>
+        </div>
+        <div class="screenshot">
+            <img src="img/revisions.jpg">
+        </div>
+    </div>
 
-            <div class="container" ng-show="panel=='panel5'">
-                <h4><strong>Insert</strong> Directives</h4>
-                <div class="description">
-                    <p>No more need to remember shortcodes or any code at all. Now you can insert a block of interactive html within cosmo's WYSIWYG editor. Simply input the information needed and it will generate the HTML for you. </p>
-                    <p>Directives can be set by the developer to feed blog posts, insert divs & even insert google maps.</p>
-                </div>
-                <div class="screenshot">
-                    <img src="img/map-directive.gif">
-                </div>
-            </div>
-        </section>
+    <div class="container" ng-show="panel=='panel5'">
+        <h4><strong>Insert</strong> Directives</h4>
+        <div class="description">
+            <p>No more need to remember shortcodes or any code at all. Now you can insert a block of interactive html within cosmo's WYSIWYG editor. Simply input the information needed and it will generate the HTML for you. </p>
+            <p>Directives can be set by the developer to feed blog posts, insert divs & even insert google maps.</p>
+        </div>
+        <div class="screenshot">
+            <img src="img/map-directive.gif">
+        </div>
+    </div>
+</section>
 
-        <section class="featured-highlight--single">
-            <div class="container">
-                <h2>Annual Cost: $0, Nada, Nothin’</h2>
-                <p>We won’t <i>Yada Yada Yada</i> our cost, we are and always will be 100% open source on all code, modules, directives and themes developed by the core team at Cosmo.</p>
-            </div>
-        </section>
-
-        <footer>
-            <div class="container">
-                <p><img src="img/logo-small.svg"> is developed with <i class="fa fa-heart"></i> in Orlando Florida by <a href="http://www.twitter.com/jordandunn">@jordandunn</a> and James Dunn</p>
-                <p>Code licensed under MIT, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0.</a></p>
-                    <p><a href="http://www.facebook.com/cosmocms"><i class="fa fa-facebook"></i></a>
-                    <a href="http://www.twitter.com/cosmocms"><i class="fa fa-twitter"></i></a>
-                    </p>
-            </div>
-        </footer>
-    </body>
-</html>
+<section class="featured-highlight--single">
+    <div class="container">
+        <h2 cs-content="featuredHeader"></h2>
+        <p cs-content="featuredText"></p>
+    </div>
+</section>
+<div ng-include="'themes/Newmanium/partials/footer.html'"></div>
