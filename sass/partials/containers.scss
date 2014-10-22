@@ -1,9 +1,9 @@
-.content-with-sidebar {
+.content {
     background-color: palette(gray, xlight);
     padding: size(30) 0;
 }
 
-.content-with-sidebar--view {
+.content--view {
     @include span(12 of 12 inside);
     padding: 0;
 

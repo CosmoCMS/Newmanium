@@ -29,7 +29,7 @@
                 </nav>
             </div>
         </header>
-        <section class="content-with-sidebar">
+        <section class="content">
             <div class="container">
                 <nav class="nav--sidebar">
                     <ul>
@@ -43,7 +43,7 @@
                         <li><a>Blogs</a></li>
                     </ul>
                 </nav>
-                <div class="content-with-sidebar--view">
+                <div class="content--view">
                     <p class="add-on--title">MODULES</p>
                     <input class="search" placeholder="search">
                     <div class="content-preview">
@@ -82,12 +82,12 @@
     </body>
 </html>
 <div ng-include="'themes/Newmanium/partials/header.html'"></div>
-<section class="content-with-sidebar">
+<section class="content">
     <div class="container">
         <nav class="nav--sidebar">
             <ul cs-menu="secondary"></ul>
         </nav>
-        <div class="content-with-sidebar--view" ng-controller="newmaniumSearchCtrl">
+        <div class="content--view" ng-controller="newmaniumSearchCtrl">
             <p class="add-on--title" cs-content="header"></p>
             <input class="search" placeholder="search" ng-model="search">
             <div class="content-preview" ng-repeat="item in items">

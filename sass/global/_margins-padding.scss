@@ -30,6 +30,7 @@ $size: (
 
 .container {
     @include container(68.75rem);
+    margin: 0 auto;
     padding: 0 size(20);
 
     @media #{$bp-delta} {
