@@ -1,0 +1,27 @@
+{
+    "name": "Newmanium",
+    "module": "newmanium",
+    "css": [
+        "css/style.minify.css"
+    ],
+    "directives": [
+        {
+            "name": "Three Features",
+            "directive": "three-features"
+        },
+        {
+            "name": "Feature Gallery",
+            "directive": "feature-gallery"
+        }
+    ],
+    "pages": [
+        "index.html",
+        "add-ons.html",
+        "docs.html",
+        "maintenance.html"
+    ],
+    "scripts": [
+        "js/newmanium.minify.js"
+    ],
+    "version": "1.0.0"
+}
