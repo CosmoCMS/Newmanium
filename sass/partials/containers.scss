@@ -32,6 +32,7 @@
     border-radius: size(5);
     float: left;
     padding: size(15);
+    width: 100%;
 
     &:nth-child(even) {
         background-color: palette(gray, xlight);

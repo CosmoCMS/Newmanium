@@ -94,6 +94,7 @@ nav {
 
 .nav--sidebar {
     @include span(12 of 12 inside);
+    border: 0;
     font-size: .9rem;
     padding: 0;
     text-align: left;
@@ -109,26 +110,44 @@ nav {
     @media #{$bp-gamma} {
         @include span(2 of 12 after);
         border-right: 1px solid palette(gray, light);
+    }
 
-        ul {
+    ul {
+        display: none;
 
-            li {
+        @media #{$bp-gamma} {
+            display: block;
+        }
+
+        li {
+            @media #{$bp-gamma} {
                 display: block;
                 margin-bottom: size(10);
                 margin-right: 0;
+            }
 
-                a {
+            a {
+                @media #{$bp-gamma} {
                     font-weight: 200;
                     margin-bottom: 0;
                     text-align: left;
                 }
+            }
 
-                ul {
+            ul {
+                @media #{$bp-gamma} {
                     margin-left: size(20);
                     margin-top: size(10);
                 }
             }
+        }
 
+    }
+
+    .cos-select {
+
+        @media #{$bp-gamma} {
+            display: none;
         }
     }
 
