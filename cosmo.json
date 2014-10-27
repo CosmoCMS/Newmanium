@@ -16,8 +16,7 @@
     ],
     "pages": [
         "index.html",
-        "add-ons.html",
-        "docs.html",
+        "page.html",
         "maintenance.html"
     ],
     "scripts": [
