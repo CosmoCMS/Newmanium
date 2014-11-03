@@ -1,30 +1,30 @@
 /* general image styling to be applied on inserting of the image */
 
-.img--xsml {
+img.img--xsml {
     width: 100%;
 
     @media #{$bp-beta} {
-        width: 250px;
+        width: 14%;
     }
 }
 
-.img--sml {
+img.img--sml {
     width: 100%;
 
     @media #{$bp-beta} {
-        width: 380px;
+        width: 30%;
     }
 }
 
-.img--med {
+img.img--med {
     width: 100%;
 
     @media #{$bp-beta} {
-        width: 480px;
+        width: 45%;
     }
 }
 
-.img--lrg {
+img.img--lrg {
     margin-bottom: size(15);
     margin-left: 0;
     transition: .5s ease;
@@ -36,35 +36,33 @@
     }
 }
 
-.img--round {
+img.img--round {
     border-radius: 2rem;
 }
 
-.img--half-round {
+img.img--half-round {
     border-radius: 2rem 0 2rem 0;
 }
 
-.img--circle {
+img.img--circle {
     border-radius: 100%;
 }
 
-.img--left {
-    float: left;
-    margin: .5rem 1.5rem 1.5rem 0;
-    transition: .5s ease;
+img.img--left {
 
-    @media #{$bp-gamma} {
-        margin-left: -13.5%;
+    @media #{$bp-beta} {
+        float: left;
+        margin: .5rem 1.5rem 1.5rem 0;
+        transition: .5s ease;
     }
 }
 
-.img--right {
-    float: right;
-    margin: .5rem 0 1.5rem 1.5rem;
-    transition: .5s ease;
+img.img--right {
 
-    @media #{$bp-gamma} {
-        margin-right: -13.5%;
+    @media #{$bp-beta} {
+        float: right;
+        margin: .5rem 0 1.5rem 1.5rem;
+        transition: .5s ease;
     }
 }
 

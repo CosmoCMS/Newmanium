@@ -35,7 +35,11 @@ nav {
     border-top: 1px solid palette(gray, mid--light);
     margin-right: 0;
     padding-top: 1.75rem;
-    text-align: center;
+    text-align: left;
+
+    @media #{$bp-alpha} {
+        text-align: center;
+    }
 
     @media #{$bp-beta} {
         @include span(8 of 12 after);
@@ -67,6 +71,10 @@ nav {
                 &:hover {
                     color: palette(blue, light);
                 }
+            }
+
+            ul {
+                display: none;
             }
         }
     }

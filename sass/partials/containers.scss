@@ -12,18 +12,20 @@
         margin-right: 0;
     }
 
+    a {
+        font-weight: 600;
+    }
+
     h4 {
         color: palette(gray, dark);
         font-size: 1.75rem;
     }
+}
 
-    img {
-        margin: size(5) 0;
-
-        @media #{$bp-beta} {
-            margin: size(20) 0;
-        }
-    }
+.content-no-sidebar--view {
+    @extend .content--view;
+    float: none;
+    margin: 0 auto;
 }
 
 .content-preview {

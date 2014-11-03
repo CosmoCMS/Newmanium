@@ -78,6 +78,7 @@ h6 {
     border-bottom: 1px solid palette(blue, mid);
     border-radius: size(5) size(5) 0 0;
     color: palette(gray, light);
+    clear: both;
     font-size: 1rem;
     font-weight: 400;
     margin: 0;
@@ -120,7 +121,7 @@ button {
 
 a {
     color: palette(gray, dark);
-    font-weight: 400;
+    font-weight: 600;
     text-decoration: none;
     transition: .025s ease-in;
 
@@ -144,7 +145,7 @@ input {
 }
 
 hr {
-    border-bottom: 1px solid palette(gray, light-mid);
+    border-bottom: 1px solid palette(gray, mid--light);
     border-left: none;
     border-right: none;
     border-top: none;

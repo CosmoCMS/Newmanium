@@ -1,4 +1,3 @@
-@import "global/normalize"; // remove unncessary defaults by browsers
 @import "global/grid/susy"; // grid system susy
 
 body, html {
@@ -13,9 +12,9 @@ body, html {
     @import "global/type";
     @import "global/tables";
     @import "global/lists";
-    @import "global/img";
     @import "global/buttons";
     @import "global/nav";
+    @import "global/img";
 
 
     @import "partials/home";
@@ -27,7 +26,6 @@ body, html {
     @import "partials/search";
     @import "partials/forms";
     @import "partials/code";
-
 
     @import "global/shame";
 
