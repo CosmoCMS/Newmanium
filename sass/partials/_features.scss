@@ -46,7 +46,6 @@
 
     h4 {
         color: palette(gray, dark);
-        font-weight: 200;
         text-align: center;
     }
 
@@ -95,7 +94,6 @@
         h4 {
             color: palette(gray, dark);
             display: block;
-            font-weight: 200;
             margin: size(15) 0;
             text-align: left;
         }
@@ -104,12 +102,12 @@
             background-color: palette(blue, light);
             border-radius: 100%;
             color: palette(gray, light);
-            font-size: 2.5em;
+            font-size: 2.5rem;
             padding: size(20);
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1.2rem;
             margin-bottom: 0;
             text-align: left;
         }

@@ -14,8 +14,7 @@
 
     h4 {
         color: palette(gray, dark);
-        line-height: 1;
-        margin-bottom: size(20);
+        font-size: 1.75rem;
     }
 
     img {
@@ -30,7 +29,6 @@
 .content-preview {
     background-color: palette(gray, light);
     border-radius: size(5);
-    float: left;
     padding: size(15);
     width: 100%;
 
@@ -39,21 +37,21 @@
     }
 
     a {
-        letter-spacing: .025em;
+        letter-spacing: .025rem;
     }
 
     h4 {
         display: inline-block;
-        font-size: 1.15em;
+        font-size: 1.15rem;
         margin-right: size(10);
 
         @media #{$bp-beta} {
-            font-size: 1.25em;
+            font-size: 1.25rem;
         }
     }
 
     i {
-        font-size: .85em;
+        font-size: .85rem;
     }
 
     img {
@@ -84,7 +82,7 @@
     border-radius: size(5);
     color: palette(blue, dark);
     display: inline-block;
-    font-size: .85em;
+    font-size: .85rem;
     margin: 0 size(5) size(10) 0;
     padding: size(10) size(10);
     transition: .1s ease;
@@ -110,7 +108,7 @@
 
 .close {
     float: left;
-    font-size: 2em;
+    font-size: 2rem;
     text-align: right;
     width: 100%;
 

@@ -1,4 +1,6 @@
-$font-alpha: quicksand, sans-serif;
+/* fonts */
+$font-alpha: 'quicksand', sans-serif;
+$font-beta: 'FontAwesome';
 
 @mixin placeholder {
     &::-webkit-input-placeholder {
@@ -28,45 +30,67 @@ h1, h2, h3, h4, p, a {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 200;
 
     @media #{$bp-beta} {
-        font-size: 3.5em;
+        font-size: 3.5rem;
     }
 }
 
 h2 {
-    font-size: 2.25em;
+    font-size: 2.25rem;
+    font-weight: 200;
 
     @media #{$bp-beta} {
-        font-size: 3em;
+        font-size: 3rem;
     }
 }
 
 h3 {
-    font-size: 2em;
+    font-size: 2rem;
+    font-weight: 200;
 
     @media #{$bp-beta} {
-        font-size: 2.5em;
+        font-size: 2.5rem;
     }
 }
 
 h4 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    font-weight: 200;
 
     @media #{$bp-beta} {
-        font-size: 2em;
+        font-size: 2rem;
     }
 }
 
+h5 {
+    color: palette(gray, dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: size(30) 0 size(10) 0;
+}
+
+h6 {
+    background-color: palette(blue, light);
+    border-bottom: 1px solid palette(blue, mid);
+    border-radius: size(5) size(5) 0 0;
+    color: palette(gray, light);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    padding: size(10);
+}
+
 p {
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: 200;
     line-height: 1.5;
 
     @media #{$bp-beta} {
-        font-size: 1.1em;
+        font-size: 1.1rem;
         line-height: 1.6;
     }
 }
@@ -75,7 +99,7 @@ blockquote {
     border-left: 2px solid palette(gray, mid);
     color: palette(gray, mid);
     font-family: $font-alpha;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-style: italic;
     line-height: 1.5;
     margin: size(15) 0 size(15) size(15);
@@ -96,7 +120,7 @@ button {
 
 a {
     color: palette(gray, dark);
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
     transition: .025s ease-in;
 

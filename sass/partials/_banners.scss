@@ -21,11 +21,11 @@
 
     p {
         color: palette(gray, light);
-        font-size: 1.25em;
+        font-size: 1.25rem;
         margin-bottom: size(30);
 
         @media #{$bp-beta} {
-            font-size: 2em;
+            font-size: 2rem;
         }
     }
 
@@ -38,7 +38,7 @@
             border: 0;
             color: palette(gray, white);
             display: inline-block;
-            font-size: 1.1em;
+            font-size: 1.1rem;
 
             &:hover {
                 background-color: palette(blue, dark);
@@ -61,7 +61,7 @@
 
         @media #{$bp-gamma} {
             display: block;
-            font-size: 1em;
+            font-size: 1rem;
             margin-top: 2rem;
         }
     }
@@ -69,5 +69,17 @@
     .intro {
         @extend .center;
         @extend .container;
+
+        div {
+            display: none;
+
+            @media #{$bp-gamma} {
+                display: block;
+            }
+        }
+
+        span {
+            color: palette(gray, light);
+        }
     }
 }

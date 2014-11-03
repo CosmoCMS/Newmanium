@@ -1,0 +1,11 @@
+code {
+    background-color: palette(gray, light);
+    border-radius: 0 0 size(5) size(5);
+    color: palette(gray, dark);
+    display: block;
+    font-family: monaco, Consolas, "Lucida Console", monospace;
+    font-size: .85em;
+    font-weight: 400;
+    line-height: 2;
+    padding: size(10);
+}
