@@ -77,6 +77,109 @@
     }
 }
 
+.container--left-sml {
+    @include span(12 of 12 after);
+    margin-right: 0;
+
+    @media #{$bp-beta} {
+        @include span(3 of 12 after);
+        margin-bottom: size(20);
+    }
+}
+
+.container--right-lrg {
+    @include span(12 of 12 after);
+    margin-right: 0;
+
+    @media #{$bp-beta} {
+        @include span(9 of 12 after);
+        margin-bottom: size(20);
+        margin-right: 0;
+    }
+}
+
+.row {
+    @include span(12 of 12 after);
+    margin: 0;
+}
+
+.row--blue {
+    @include span(12 of 12 inside);
+    background-color: palette(blue, dark);
+    border-radius: size(5);
+    color: palette(gray, light);
+    margin: size(30) 0;
+    padding: 1rem;
+
+    @media #{$bp-beta} {
+        padding: 4rem;
+    }
+
+    a {
+        color: palette(blue, light);
+    }
+
+    h4 {
+        color: palette(gray, light);
+    }
+
+    .feature {
+        @include span(12 of 12 inside);
+        margin-bottom: size(30);
+        text-align: center;
+
+        @media #{$bp-beta} {
+            @include span(6 of 12 after);
+            margin-bottom: 0;
+
+            &:last-child {
+                border-right: 0;
+                margin-right: 0;
+            }
+        }
+
+        h4 {
+            color: palette(gray, light);
+            display: block;
+            margin: size(15) 0;
+            text-align: left;
+        }
+
+        i {
+            color: palette(gray, light);
+            font-size: 3.5rem;
+            height: 5rem;
+            width: 5rem;
+        }
+
+        p {
+            color: palette(gray, light);
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+}
+
+.row--white {
+    @extend .row--blue;
+    background-color: palette(gray, light);
+
+    img {
+        border-radius: 100%;
+        margin-bottom: 1rem;
+
+        @media #{$bp-alpha} {
+            width: 50%;
+        }
+    }
+
+    .feature {
+        p {
+            color: palette(gray, dark);
+        }
+    }
+}
 
 .cta {
     background-color: transparent;

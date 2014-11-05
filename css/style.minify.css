@@ -93,9 +93,9 @@ body, html {
 .cosmo-theme h5 {
   color: #2b2827;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
-  margin: 1.875rem 0 0.625rem 0;
+  margin: 1.875rem 0 1.25rem 0;
 }
 .cosmo-theme h6 {
   background-color: #70c8c4;
@@ -265,7 +265,7 @@ body, html {
 }
 @media only screen and (min-width: 768px) {
   .cosmo-theme header .logo {
-    width: 32.20339%;
+    width: 23.72881%;
     float: left;
     margin-right: 1.69492%;
     margin-bottom: 0;
@@ -297,7 +297,7 @@ body, html {
 }
 @media only screen and (min-width: 768px) {
   .cosmo-theme nav {
-    width: 66.10169%;
+    width: 74.57627%;
     float: left;
     margin-right: 1.69492%;
     border-top: 0;
@@ -326,9 +326,6 @@ body, html {
 }
 .cosmo-theme nav ul li a:hover {
   color: #70c8c4;
-}
-.cosmo-theme nav ul li ul {
-  display: none;
 }
 .cosmo-theme .featured {
   background-color: #70c8c4;
@@ -373,33 +370,28 @@ body, html {
     border-right: 1px solid #f7f7f7;
   }
 }
-.cosmo-theme .nav--sidebar ul {
-  display: none;
+.cosmo-theme .nav--sidebar ul li {
+  display: block;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  margin-right: 0;
+  min-height: 0;
 }
-@media only screen and (min-width: 1024px) {
-  .cosmo-theme .nav--sidebar ul {
-    display: block;
-  }
+.cosmo-theme .nav--sidebar ul li a {
+  font-weight: 600;
+  min-height: 0;
+  text-align: left;
 }
-@media only screen and (min-width: 1024px) {
-  .cosmo-theme .nav--sidebar ul li {
-    display: block;
-    margin-bottom: 0.625rem;
-    margin-right: 0;
-  }
+.cosmo-theme .nav--sidebar ul li ul {
+  margin-left: 1.25rem;
+  margin-top: 1.25rem;
 }
-@media only screen and (min-width: 1024px) {
-  .cosmo-theme .nav--sidebar ul li a {
-    font-weight: 200;
-    margin-bottom: 0;
-    text-align: left;
-  }
+.cosmo-theme .nav--sidebar ul li ul li {
+  display: inline-block;
+  margin-right: 0.938rem;
 }
-@media only screen and (min-width: 1024px) {
-  .cosmo-theme .nav--sidebar ul li ul {
-    margin-left: 1.25rem;
-    margin-top: 0.625rem;
-  }
+.cosmo-theme .nav--sidebar ul li ul li:last-child {
+  margin-bottom: 0;
 }
 @media only screen and (min-width: 1024px) {
   .cosmo-theme .nav--sidebar .cos-select {
@@ -665,6 +657,121 @@ body, html {
     margin-top: 0;
   }
 }
+.cosmo-theme .container--left-sml {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .cosmo-theme .container--left-sml {
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-bottom: 1.25rem;
+  }
+}
+.cosmo-theme .container--right-lrg {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin-right: 0;
+}
+@media only screen and (min-width: 768px) {
+  .cosmo-theme .container--right-lrg {
+    width: 74.57627%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-bottom: 1.25rem;
+    margin-right: 0;
+  }
+}
+.cosmo-theme .row {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  margin: 0;
+}
+.cosmo-theme .row--blue, .cosmo-theme .row--white {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  background-color: #4a6067;
+  border-radius: 0.313rem;
+  color: #f7f7f7;
+  margin: 1.875rem 0;
+  padding: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .cosmo-theme .row--blue, .cosmo-theme .row--white {
+    padding: 4rem;
+  }
+}
+.cosmo-theme .row--blue a, .cosmo-theme .row--white a {
+  color: #70c8c4;
+}
+.cosmo-theme .row--blue h4, .cosmo-theme .row--white h4 {
+  color: #f7f7f7;
+}
+.cosmo-theme .row--blue .feature, .cosmo-theme .row--white .feature {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding-left: 0.83333%;
+  padding-right: 0.83333%;
+  margin-bottom: 1.875rem;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .cosmo-theme .row--blue .feature, .cosmo-theme .row--white .feature {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+    margin-bottom: 0;
+  }
+  .cosmo-theme .row--blue .feature:last-child, .cosmo-theme .row--white .feature:last-child {
+    border-right: 0;
+    margin-right: 0;
+  }
+}
+.cosmo-theme .row--blue .feature h4, .cosmo-theme .row--white .feature h4 {
+  color: #f7f7f7;
+  display: block;
+  margin: 0.938rem 0;
+  text-align: left;
+}
+.cosmo-theme .row--blue .feature i, .cosmo-theme .row--white .feature i {
+  color: #f7f7f7;
+  font-size: 3.5rem;
+  height: 5rem;
+  width: 5rem;
+}
+.cosmo-theme .row--blue .feature p, .cosmo-theme .row--white .feature p {
+  color: #f7f7f7;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  text-align: left;
+}
+.cosmo-theme .row--white {
+  background-color: #f7f7f7;
+}
+.cosmo-theme .row--white img {
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 480px) {
+  .cosmo-theme .row--white img {
+    width: 50%;
+  }
+}
+.cosmo-theme .row--white .feature p {
+  color: #2b2827;
+}
 .cosmo-theme .cta {
   background-color: transparent;
   border: 1px solid #4a6067;
@@ -740,7 +847,7 @@ body, html {
   .cosmo-theme .banner--lrg {
     background: center center no-repeat fixed;
     background-size: cover;
-    height: 80%;
+    height: 85%;
   }
 }
 .cosmo-theme .banner--lrg h1 {
@@ -803,7 +910,7 @@ body, html {
   color: #f7f7f7;
 }
 .cosmo-theme .features--buttons {
-  margin: 1.875rem 0 1.25rem 0;
+  margin: 0 0 1.25rem 0;
   text-align: center;
 }
 .cosmo-theme .features--buttons button {
@@ -840,7 +947,7 @@ body, html {
 }
 .cosmo-theme .features--1-up {
   background-color: #f7f7f7;
-  padding: 1.875rem 0;
+  padding: 4rem 0;
 }
 .cosmo-theme .features--1-up h4 {
   color: #2b2827;
@@ -881,7 +988,7 @@ body, html {
   width: 100%;
 }
 .cosmo-theme .features--3-up {
-  padding: 1.875rem 0;
+  padding: 4rem 0;
 }
 .cosmo-theme .features--3-up .feature {
   box-sizing: border-box;

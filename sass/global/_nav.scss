@@ -15,7 +15,7 @@ header {
         margin-right: 0;
 
         @media #{$bp-beta} {
-            @include span(4 of 12 after);
+            @include span(3 of 12 after);
             margin-bottom: 0;
         }
 
@@ -42,7 +42,7 @@ nav {
     }
 
     @media #{$bp-beta} {
-        @include span(8 of 12 after);
+        @include span(9 of 12 after);
         border-top: 0;
         margin-right: 0;
         text-align: right;
@@ -71,10 +71,6 @@ nav {
                 &:hover {
                     color: palette(blue, light);
                 }
-            }
-
-            ul {
-                display: none;
             }
         }
     }
@@ -121,31 +117,31 @@ nav {
     }
 
     ul {
-        display: none;
-
-        @media #{$bp-gamma} {
-            display: block;
-        }
 
         li {
-            @media #{$bp-gamma} {
-                display: block;
-                margin-bottom: size(10);
-                margin-right: 0;
-            }
+            display: block;
+            line-height: 1;
+            margin-bottom: size(20);
+            margin-right: 0;
+            min-height: 0;
 
             a {
-                @media #{$bp-gamma} {
-                    font-weight: 200;
-                    margin-bottom: 0;
-                    text-align: left;
-                }
+                font-weight: 600;
+                min-height: 0;
+                text-align: left;
             }
 
             ul {
-                @media #{$bp-gamma} {
-                    margin-left: size(20);
-                    margin-top: size(10);
+                margin-left: size(20);
+                margin-top: size(20);
+
+                li {
+                    display: inline-block;
+                    margin-right: size(15);
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
                 }
             }
         }
