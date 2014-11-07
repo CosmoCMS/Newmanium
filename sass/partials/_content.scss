@@ -1,0 +1,157 @@
+.content--bg-green {
+    flex: 1;
+    text-align: center;
+
+    a {
+        color: palette(brand, green);
+    }
+
+    h2, p {
+        color: palette(gray, light);
+    }
+
+    h2 {
+        border-bottom: 1px solid palette(brand, green);
+        padding-bottom: size(20);
+    }
+}
+
+.content--border-right {
+    border-bottom: 1px solid palette(gray, light);
+    flex: 0 0 100%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+
+    &:last-child {
+        border-bottom: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    @media #{$bp-beta} {
+        border-bottom: 0;
+        border-right: 1px solid palette(gray, light);
+        flex: 1;
+        margin-bottom: 0;
+        margin-right: 2.5%;
+        padding-bottom: 0;
+        padding-right: 2.5%;
+
+        &:last-child {
+            border-right: 0;
+            margin-right: 0;
+            padding-right: 0;
+        }
+    }
+
+    h4 {
+        text-align: left;
+    }
+
+    p {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+}
+
+.content--tabs {
+    margin: 0 auto;
+    margin-bottom: size(30);
+    text-align: center;
+
+    .button--blue-mid {
+        margin: 0 size(10) size(10) 0;
+    }
+}
+
+.content--w-media {
+
+    .description {
+        flex: $col-twelve;
+
+        @media #{$bp-beta} {
+            flex: 1.5;
+            padding-right: 5%;
+        }
+    }
+
+    .media {
+        flex: $col-twelve;
+        padding: 0;
+
+        @media #{$bp-beta} {
+            flex: 1;
+            margin-right: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.content--w-sidebar {
+    flex: $col-twelve;
+
+    @media #{$bp-gamma} {
+        flex: 5;
+    }
+
+    .content-info {
+        @extend .icon--bg-light-blue;
+        text-align: left;
+
+        i {
+            display: none;
+
+            @media #{$bp-alpha} {
+                display: inline-block;
+                font-size: .8rem;
+                height: 2rem;
+                margin-right: 1rem;
+                padding: .65rem .5rem .65rem .7rem;
+                width: 2rem;
+            }
+        }
+
+        p {
+            display: inline-block;
+            margin-right: 1rem;
+            margin-top: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.content--wo-sidebar {
+    @extend .content--w-sidebar;
+    margin: 0 auto;
+    max-width: 57rem;
+
+    .content--border-right {
+
+        @media #{$bp-beta} {
+            margin-right: 5%;
+            padding-right: 5%;
+
+            &:last-child {
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.header {
+    flex: 1;
+    margin-bottom: size(30);
+    text-align: center;
+}
+
+.rounded {
+    border-radius: size(5);
+}

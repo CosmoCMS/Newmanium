@@ -72,7 +72,6 @@ h1 {
     font-size: 2.5rem;
     font-weight: 200;
     margin-bottom: 2.5rem;
-    margin-top: 0;
 
     @media #{$bp-beta} {
         font-size: 3.5rem;
@@ -160,10 +159,6 @@ hr {
     border-left: none;
     border-right: none;
     border-top: none;
-}
-
-img {
-    width: 100%;
 }
 
 ::selection {

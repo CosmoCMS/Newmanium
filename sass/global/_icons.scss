@@ -1,0 +1,25 @@
+.icon--bg-light-blue {
+    text-align: center;
+
+    i {
+        background-color: palette(blue, light);
+        border-radius: 100%;
+        color: palette(gray, light);
+        font-size: 2.5rem;
+        height: 5rem;
+        padding: size(20);
+        width: 5rem;
+    }
+
+    p {
+        margin-top: 1.75rem;
+    }
+}
+
+.icon--bg-dark-blue {
+    @extend .icon--bg-light-blue;
+
+    i {
+        background-color: palette(blue, dark);
+    }
+}

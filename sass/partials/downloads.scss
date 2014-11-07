@@ -1,0 +1,99 @@
+.add-on--title {
+    color: palette(gray, mid--light);
+}
+
+.close {
+    float: left;
+    font-size: 2rem;
+    text-align: right;
+    width: 100%;
+
+    a {
+        color: palette(gray, mid--light);
+        transition: .15s ease;
+
+        &:hover {
+            color: palette(gray, mid);
+        }
+    }
+}
+
+.content-preview {
+    background-color: palette(gray, xlight);
+    border-radius: size(5);
+    padding: size(15);
+    width: 100%;
+
+    &:nth-child(even) {
+        background-color: palette(gray, white);
+    }
+
+    .button--blue-border {
+        margin: 0 size(5) size(10) 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    h4 {
+        display: inline-block;
+        margin-right: size(10);
+    }
+
+    i {
+        font-size: .85rem;
+    }
+
+    img {
+
+        @media #{$bp-beta} {
+            transition: .25s ease-in-out .35s;
+
+            &:hover {
+                width: 100%;
+            }
+
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+
+            &:nth-child(1n+3) {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.cplus {
+    color: palette(brand, yellow);
+
+    &:hover {
+        color: palette(brand, yellow);
+    }
+}
+
+.fail {
+    color: palette(brand, red);
+
+    &:hover {
+        color: palette(brand, red);
+    }
+}
+
+.images {
+    float: left;
+}
+
+.pass {
+    color: palette(brand, green);
+
+    &:hover {
+        color: palette(brand, green);
+    }
+}
+
+.screenshots {
+    float: left;
+    width: 100%;
+}

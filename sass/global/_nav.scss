@@ -1,6 +1,5 @@
 footer {
     background-color: palette(gray, white);
-    font-size: .85rem;
 
     a {
         color: palette(brand, red);
@@ -22,6 +21,7 @@ footer {
 
     p {
         color: palette(gray, mid);
+        font-size: .85rem;
 
         &:last-child {
             margin-bottom: 0;
@@ -171,7 +171,7 @@ nav {
 
 }
 
-.active {
+.sidebar .active {
     background-color: palette(gray, light);
     border-radius: size(5);
     margin-top: 0;

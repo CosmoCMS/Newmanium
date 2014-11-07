@@ -16,16 +16,12 @@ body, [ng-include="template"] {
     @import "global/buttons";
     @import "global/nav";
     @import "global/img";
+    @import "global/icons";
 
-
-    @import "partials/home";
-    @import "partials/containers";
+    @import "partials/content";
+    @import "partials/downloads";
     @import "partials/banners";
-    @import "partials/features";
     @import "partials/tooltip";
-    @import "partials/article-overview";
-    @import "partials/search";
-    @import "partials/forms";
     @import "partials/code";
 
     @import "global/shame";

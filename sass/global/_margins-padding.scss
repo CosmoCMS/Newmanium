@@ -26,3 +26,23 @@ $size: (
 .center {
     @include center;
 }
+
+.pad-horz {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @media #{$bp-beta} {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+.pad-vert {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+
+    @media #{$bp-beta} {
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+    }
+}

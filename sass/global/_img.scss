@@ -1,5 +1,9 @@
 /* general image styling to be applied on inserting of the image */
 
+img {
+    width: 100%;
+}
+
 img.img--xsml {
     width: 100%;
 
@@ -34,10 +38,6 @@ img.img--lrg {
         margin-left: -30%;
         width: 160%;
     }
-}
-
-img.img--round {
-    border-radius: 2rem;
 }
 
 img.img--half-round {

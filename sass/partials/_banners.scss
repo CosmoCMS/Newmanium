@@ -2,12 +2,13 @@
     @include center;
     background: center center no-repeat;
     background-size: cover;
-    min-height: 80vh;
+    height: 100vh;
     letter-spacing: -.05rem;
 
     @media #{$bp-beta} {
         background: center center no-repeat fixed;
         background-size: cover;
+        height: 80vh;
     }
 
     p {

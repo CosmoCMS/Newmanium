@@ -16,10 +16,12 @@ $col-twelve: 0 0 100%;
     flex-wrap: wrap;
     max-width: 68.75rem;
     margin: 0 auto;
-    padding: 0 size(20);
+    padding-left: size(20);
+    padding-right: size(20);
 
     @media #{$bp-epsilon} {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -30,11 +32,6 @@ $col-twelve: 0 0 100%;
 
 .row-horz {
     flex-direction: row;
-}
-
-.pad-vert {
-    padding-bottom: 4rem;
-    padding-top: 4rem;
 }
 
 .site-content {

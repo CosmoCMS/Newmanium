@@ -43,6 +43,30 @@ $colors: (
        color: palette(gray, white);
 }
 
+.bg-blue--light {
+    background-color: palette(blue, light);
+
+    p, h1, h2, h3, h4, h5, h6 {
+        color: palette(gray, light);
+    }
+
+    a {
+        color: palette(blue, mid);
+
+        &:hover {
+            color: palette(blue, dark);
+        }
+    }
+}
+
+.bg-blue--dark {
+    background-color: palette(blue, dark);
+
+    p, h1, h2, h3, h4, h5, h6 {
+        color: palette(gray, light);
+    }
+}
+
 .bg-gray--xlight {
     background-color: palette(gray, xlight);
 }
