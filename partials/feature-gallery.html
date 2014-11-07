@@ -1,15 +1,17 @@
-<section class="features--1-up">
-    <div class="container">
-        <div class="features--buttons">
-            <div ng-class="{active: currentIndex==$index}" ng-repeat="feature in features track by $index" ng-click="featureGallery.currentIndex=$index">{{feature.button}}</div>
-            <div ng-if="admin" ng-click="addFeature()">+</div>
-        </div>
+<section class="pad-vert bg-gray--xlight">
+    <div class="container content--tabs">
+        <div ng-class="{active: currentIndex==$index}" ng-repeat="feature in features track by $index" ng-click="featureGallery.currentIndex=$index">{{feature.button}}</div>
+        <div ng-if="admin" ng-click="addFeature()">+</div>
     </div>
     <div class="container" ng-repeat="feature in features track by $index" ng-show="featureGallery.currentIndex==$index">
-        <h4 cs-content="feature-header-{{$index}}" prepopulate="title"></h4>
-        <div class="description" cs-content="feature-text-{{$index}}" prepopulate="description">
+        <div class="header">
+            <h4 cs-content="feature-header-{{$index}}" prepopulate="title"></h4>
         </div>
-        <div class="screenshot">
+        <div class="content--w-media">
+            <div class="description" cs-content="feature-text-{{$index}}" prepopulate="description">
+            </div>
+        </div>
+        <div class="media">
             <img cs-image="feature-image-{{$index}}">
         </div>
     </div>

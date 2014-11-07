@@ -25,3 +25,39 @@
         color: palette(gray, light);
     }
 }
+
+
+.button--blue-mid {
+    @extend %button;
+    border: 1px solid palette(blue, mid);
+    color: palette(blue, mid);
+    display: inline-block;
+    padding: size(10) size(20);
+    width: 100%;
+
+    @media #{$bp-alpha} {
+        width: auto;
+    }
+
+    &:focus {
+        background-color: palette(blue, dark);
+    }
+
+    &:hover {
+        background-color: palette(blue, light);
+        border: 1px solid palette(blue, light);
+        color: palette(gray, light);
+    }
+
+    &.active {
+        background-color: palette(blue, dark);
+        border: 1px solid palette(blue, dark);
+        color: palette(gray, light);
+
+        &:hover {
+            background-color: palette(blue, dark);
+            border: 1px solid palette(blue, dark);
+            cursor: default;
+        }
+    }
+}

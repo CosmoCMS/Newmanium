@@ -1,5 +1,5 @@
 .article-row {
-    @include container;
+    max-width: 68.75rem; margin: 0 auto; ;
     border-bottom: 1px solid palette(gray, mid--light);
     margin-top: 2rem;
     padding-bottom: 2rem;
@@ -34,7 +34,7 @@
 }
 
 .article--img-side {
-    @include span(12 of 12 inside);
+
     background: center center no-repeat;
     background-size: cover;
     height: 8rem;
@@ -45,12 +45,12 @@
     }
 
     @media #{$bp-beta} {
-        @include span(4 of 12 before);
+
         height: 14rem;
         margin: 0 2rem 0 0;
     }
 
     @media #{$bp-epsilon} {
-        @include span(4 of 12 after);
+
     }
 }

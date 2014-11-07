@@ -24,7 +24,7 @@ $colors: (
     brand: (
         red: rgba(234, 29, 44, 1),
         green: rgba(32, 186, 44, 1),
-        green-light: rgba(109, 213, 149, 1),
+        green--light: rgba(109, 213, 149, 1),
         yellow: rgba(255, 211, 44, 1),
         yellow-light: rgba(215, 236, 103, 1),
     ),
@@ -41,4 +41,20 @@ $colors: (
 ::selection {
        background-color: palette(brand, red);
        color: palette(gray, white);
+}
+
+.bg-gray--xlight {
+    background-color: palette(gray, xlight);
+}
+
+.bg-gray--light {
+    background-color: palette(gray, light);
+}
+
+.bg-green {
+    background-color: palette(brand, green);
+}
+
+.bg-green--light {
+    background-color: palette(brand, green--light);
 }

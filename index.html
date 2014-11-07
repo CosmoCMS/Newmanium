@@ -1,18 +1,28 @@
 <div ng-include="'themes/Newmanium/partials/header.html'"></div>
-<section class="banner--lrg" role="homepage banner" cs-bg-image="featured">
-    <div class="intro">
-        <h1 cs-content="header"></h1>
-        <p cs-content="subheader"></p>
-        <div cs-content="featureText"></div>
-    </div>
-</section>
+<main>
+    <section class="banner--lrg" role="homepage banner" cs-bg-image="featured">
+        <div class="container">
+            <div class="header">
+                <h1 cs-content="header"></h1>
+            </div>
+            <div class="container--flex">
+                <div class="intro">
+                    <p cs-content="subheader"></p>
+                </div>
+                <div class="actions" cs-content="featureText"></div>
+            </div>
+        </div>
+    </section>
 
-<div cs-content="body"></div>
+    <section cs-content="body"></section>
 
-<section class="featured-highlight--single">
-    <div class="container">
-        <h2 cs-content="featuredHeader"></h2>
-        <p cs-content="featuredText"></p>
-    </div>
-</section>
+    <section class="pad-vert bg-green--light">
+        <div class="container">
+            <div class="content--bg-green">
+                <h2 cs-content="featuredHeader"></h2>
+                <p cs-content="featuredText"></p>
+            </div>
+        </div>
+    </section>
+</main>
 <div ng-include="'themes/Newmanium/partials/footer.html'"></div>

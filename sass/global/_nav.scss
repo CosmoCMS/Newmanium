@@ -1,3 +1,39 @@
+footer {
+    background-color: palette(gray, white);
+    font-size: .85rem;
+
+    a {
+        color: palette(brand, red);
+
+        &:hover {
+            color: palette(blue, light);
+        }
+    }
+
+    img {
+        display: inline-block;
+        margin-bottom: -.4rem;
+        width: 5rem;
+    }
+
+    i.fa-facebook, i.fa-twitter {
+        margin: 0 .5rem;
+    }
+
+    p {
+        color: palette(gray, mid);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .content--footer {
+        flex: 1;
+        text-align: center;
+    }
+}
+
 header {
     background-color: palette(gray, light);
     border-bottom: 1px solid palette(gray, mid--light);
@@ -9,13 +45,17 @@ header {
         padding-bottom: 0;
     }
 
+    .container {
+        justify-content: space-between;
+    }
+
     .logo {
-        @include span(12 of 12 after);
+        flex: $col-twelve;
         margin-bottom: .5rem;
         margin-right: 0;
 
         @media #{$bp-beta} {
-            @include span(3 of 12 after);
+            flex: 1;
             margin-bottom: 0;
         }
 
@@ -31,8 +71,8 @@ header {
 }
 
 nav {
-    @include span(12 of 12 after);
     border-top: 1px solid palette(gray, mid--light);
+    flex: $col-twelve;
     margin-right: 0;
     padding-top: 1.75rem;
     text-align: left;
@@ -42,7 +82,7 @@ nav {
     }
 
     @media #{$bp-beta} {
-        @include span(9 of 12 after);
+        flex: 3;
         border-top: 0;
         margin-right: 0;
         text-align: right;
@@ -76,133 +116,100 @@ nav {
     }
 }
 
-.featured {
-    background-color: palette(blue, light);
-    border-radius: size(5);
-    margin-top: - size(10);
-    transition: .15s ease-in-out;
-
-    &:hover {
-        background-color: palette(blue, dark);
-
-        a {
-            color: palette(gray, light);
-        }
-    }
-
-    a {
-        color: palette(gray, light);
-        padding: size(5) size(10);
-    }
-}
-
-.nav--sidebar {
-    @include span(12 of 12 inside);
+.sidebar {
+    flex: $col-twelve;
     border: 0;
     font-size: .9rem;
+    margin-bottom: size(30);
     padding: 0;
     text-align: left;
+
+    @media #{$bp-gamma} {
+        flex: 1;
+        margin-bottom: 0;
+        margin-right: 2.5%;
+    }
 
     p {
         color: palette(blue, dark);
         display: block;
         font-size: 1em;
-        font-weight: 600;
         margin-bottom: size(10);
-    }
-
-    @media #{$bp-gamma} {
-        @include span(2 of 12 after);
-        border-right: 1px solid palette(gray, light);
-    }
-
-    ul {
-
-        li {
-            display: block;
-            line-height: 1;
-            margin-bottom: size(20);
-            margin-right: 0;
-            min-height: 0;
-
-            a {
-                font-weight: 600;
-                min-height: 0;
-                text-align: left;
-            }
-
-            ul {
-                margin-left: size(20);
-                margin-top: size(20);
-
-                li {
-                    display: inline-block;
-                    margin-right: size(15);
-
-                    &:last-child {
-                        margin-bottom: 0;
-                    }
-                }
-            }
-        }
-
-    }
-
-    .cos-select {
-
-        @media #{$bp-gamma} {
-            display: none;
-        }
-    }
-
-    .active {
-        background-color: palette(gray, light);
-        border-radius: size(5);
-        margin-top: 0;
-        padding: size(5) size(10);
-
-        &:hover {
-            background-color: palette(gray, light);
-            color: palette(blue, dark);
-            cursor: default;
-        }
     }
 }
 
-/* universal footer */
+.sidebar ul {
+    padding-left: 0;
 
-footer {
-    background-color: palette(gray, white);
-    bottom: 0;
-    font-size: .85rem;
-    padding: size(30) 0;
-    text-align: center;
+    li {
+        display: block;
+        line-height: 1;
+        list-style: none;
+        margin-bottom: size(20);
+        margin-right: 0;
+        min-height: 0;
 
-    img {
-        display: inline-block;
-        margin-bottom: -.4rem;
-        width: 5rem;
-    }
+        a {
+            min-height: 0;
+            text-align: left;
+        }
 
-    a {
-        color: palette(brand, red);
-        transition: color .15s ease-in;
+        ul {
+            margin-left: size(20);
+            margin-top: size(20);
 
-        &:hover {
-            color: palette(blue, light);
+            li {
+                display: inline-block;
+                margin-right: size(15);
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 
-    i.fa-facebook, i.fa-twitter {
-        margin: 0 .5rem;
+}
+
+.active {
+    background-color: palette(gray, light);
+    border-radius: size(5);
+    margin-top: 0;
+    padding: size(5) size(10);
+
+    &:hover {
+        background-color: palette(gray, light);
+        color: palette(blue, dark);
+        cursor: default;
     }
+}
 
-    p {
-        color: palette(gray, mid);
-        margin-bottom: size(10);
+.sidebar .icon--bg-light-blue {
 
-        &:last-child {
-            margin-bottom: 0;
+    @media #{$bp-beta--end} {
+        text-align: left;
+
+        i {
+            display: none;
+
+            @media #{$bp-alpha} {
+                display: inline-block;
+                font-size: .8rem;
+                height: 2rem;
+                margin-right: 1rem;
+                padding: .65rem .5rem .65rem .7rem;
+                width: 2rem;
+            }
+        }
+
+        p {
+            display: inline-block;
+            margin-right: 1rem;
+            margin-top: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 }

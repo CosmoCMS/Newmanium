@@ -24,5 +24,9 @@
             color: palette(gray, light);
             font-size: 1.5rem;
         }
+
+        .content {
+            flex: $col-twelve;
+        }
     }
 }

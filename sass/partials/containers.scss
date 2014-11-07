@@ -1,31 +1,36 @@
-.content {
-    background-color: palette(gray, xlight);
-    padding: size(30) 0;
-}
-
-.content--view {
-    @include span(12 of 12 inside);
-    padding: 0;
+.content--w-sidebar {
+    flex: $col-twelve;
 
     @media #{$bp-gamma} {
-        @include span(10 of 12 after);
-        margin-right: 0;
+        flex: 5;
     }
 
-    a {
-        font-weight: 600;
-    }
+    .icon--bg-light-blue {
+        text-align: left;
 
-    h4 {
-        color: palette(gray, dark);
-        font-size: 1.75rem;
-    }
-}
+        i {
+            display: none;
 
-.content-no-sidebar--view {
-    @extend .content--view;
-    float: none;
-    margin: 0 auto;
+            @media #{$bp-alpha} {
+                display: inline-block;
+                font-size: .8rem;
+                height: 2rem;
+                margin-right: 1rem;
+                padding: .65rem .5rem .65rem .7rem;
+                width: 2rem;
+            }
+        }
+
+        p {
+            display: inline-block;
+            margin-right: 1rem;
+            margin-top: 0;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 .content-preview {
@@ -59,7 +64,7 @@
     img {
 
         @media #{$bp-beta} {
-            @include span(6 of 12 after);
+
             transition: .25s ease-in-out .35s;
 
             &:hover {
@@ -78,33 +83,33 @@
 }
 
 .container--left-sml {
-    @include span(12 of 12 after);
+
     margin-right: 0;
 
     @media #{$bp-beta} {
-        @include span(3 of 12 after);
+
         margin-bottom: size(20);
     }
 }
 
 .container--right-lrg {
-    @include span(12 of 12 after);
+
     margin-right: 0;
 
     @media #{$bp-beta} {
-        @include span(9 of 12 after);
+
         margin-bottom: size(20);
         margin-right: 0;
     }
 }
 
 .row {
-    @include span(12 of 12 after);
+
     margin: 0;
 }
 
 .row--blue {
-    @include span(12 of 12 inside);
+
     background-color: palette(blue, dark);
     border-radius: size(5);
     color: palette(gray, light);
@@ -124,12 +129,12 @@
     }
 
     .feature {
-        @include span(12 of 12 inside);
+
         margin-bottom: size(30);
         text-align: center;
 
         @media #{$bp-beta} {
-            @include span(6 of 12 after);
+
             margin-bottom: 0;
 
             &:last-child {
@@ -255,5 +260,4 @@
 
 .add-on--title {
     color: palette(gray, mid--light);
-    font-weight: 600;
 }

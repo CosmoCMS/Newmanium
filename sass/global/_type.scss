@@ -24,14 +24,55 @@ $font-beta: 'FontAwesome';
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, p, a {
+a, button {
+    outline: none;
+}
+
+a {
+    color: palette(blue, light);
+    font-weight: 400;
+    text-decoration: none;
+    transition: .025s ease-in;
+
+    &:active, &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: palette(blue, mid);
+        cursor: pointer;
+    }
+}
+
+b {
+    font-weight: 400;
+}
+
+blockquote {
+    border-left: 2px solid palette(gray, mid);
+    color: palette(gray, mid);
     font-family: $font-alpha;
-    margin-top: 0;
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 1.5;
+    margin: size(15) 0 size(15) size(15);
+    padding: size(25) 1.5rem;
+}
+
+button {
+    border: 0;
+    font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, b {
+    font-family: $font-alpha;
 }
 
 h1 {
     font-size: 2.5rem;
     font-weight: 200;
+    margin-bottom: 2.5rem;
+    margin-top: 0;
 
     @media #{$bp-beta} {
         font-size: 3.5rem;
@@ -41,6 +82,7 @@ h1 {
 h2 {
     font-size: 2.25rem;
     font-weight: 200;
+    line-height: 1.5;
 
     @media #{$bp-beta} {
         font-size: 3rem;
@@ -50,6 +92,8 @@ h2 {
 h3 {
     font-size: 2rem;
     font-weight: 200;
+    margin-bottom: 1.25rem;
+    margin-top: 0;
 
     @media #{$bp-beta} {
         font-size: 2.5rem;
@@ -59,6 +103,7 @@ h3 {
 h4 {
     font-size: 1.5rem;
     font-weight: 200;
+    margin: 1rem 0;
 
     @media #{$bp-beta} {
         font-size: 2rem;
@@ -86,53 +131,19 @@ h6 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 200;
     line-height: 1.5;
+    margin-top: 0;
 
     @media #{$bp-beta} {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.6;
     }
 }
 
-blockquote {
-    border-left: 2px solid palette(gray, mid);
-    color: palette(gray, mid);
-    font-family: $font-alpha;
-    font-size: 1.25rem;
-    font-style: italic;
-    line-height: 1.5;
-    margin: size(15) 0 size(15) size(15);
-    padding: size(25) 1.5rem;
-}
-
 small {
     font-size: 85%;
-}
-
-a, button {
-    outline: none;
-}
-
-button {
-    border: 0;
-}
-
-a {
-    color: palette(gray, dark);
-    font-weight: 600;
-    text-decoration: none;
-    transition: .025s ease-in;
-
-    &:active, &:focus {
-        outline: none;
-    }
-
-    &:hover {
-        color: palette(gray, mid);
-        cursor: pointer;
-    }
 }
 
 input {

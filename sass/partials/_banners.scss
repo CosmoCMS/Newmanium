@@ -1,51 +1,48 @@
 .banner--lrg {
+    @include center;
     background: center center no-repeat;
     background-size: cover;
-    height: 30rem;
+    min-height: 80vh;
     letter-spacing: -.05rem;
-    position: relative;
-    text-align: center;
 
     @media #{$bp-beta} {
         background: center center no-repeat fixed;
         background-size: cover;
-        height: 85%;
-    }
-
-    h1 {
-        color: palette(gray, light);
-        display: block;
-        font-weight: 400;
-        margin-bottom: size(20);
     }
 
     p {
         color: palette(gray, light);
         font-size: 1.25rem;
-        margin-bottom: size(30);
+        margin-bottom: 0;
 
         @media #{$bp-beta} {
             font-size: 2rem;
         }
     }
 
+    span {
+        letter-spacing: .05rem;
+    }
+
+    .container {
+        align-items: center;
+        margin: auto;
+    }
+
     .download {
         @extend %button;
-        display: none;
+        background-color: palette(blue, light);
+        border: 0;
+        color: palette(gray, white);
+        font-size: 1.1rem;
+        margin-bottom: size(20);
+        width: 100%;
 
-        @media #{$bp-gamma} {
-            background-color: palette(blue, light);
-            border: 0;
-            color: palette(gray, white);
-            display: inline-block;
-            font-size: 1.1rem;
+        &:hover {
+            background-color: palette(blue, dark);
 
-            &:hover {
-                background-color: palette(blue, dark);
-
-                i {
-                    color: palette(blue, light);
-                }
+            i {
+                color: palette(blue, light);
             }
         }
     }
@@ -54,28 +51,33 @@
         @extend .download;
         background-color: palette(gray, mid--light);
         color: palette(blue, dark);
+        margin-bottom: 0;
+        margin-top: size(20);
+        width: 100%;
     }
 
-    .github-disclaimer {
-        display: none;
-
-        @media #{$bp-gamma} {
-            display: block;
-            font-size: 1rem;
-            margin-top: 2rem;
-        }
+    .header h1 {
+        color: palette(gray, light);
     }
 
     .intro {
-        @extend .center;
-        @extend .container;
+        flex: $col-twelve;
+        margin-bottom: size(30);
+        text-align: left;
 
-        div {
-            display: none;
+        @media #{$bp-gamma} {
+            flex: 3;
+            margin-bottom: 0;
+        }
+    }
 
-            @media #{$bp-gamma} {
-                display: block;
-            }
+    .actions {
+        flex: $col-twelve;
+        text-align: center;
+
+        @media #{$bp-gamma} {
+            flex: 1;
+            margin-left: 5%;
         }
 
         span {
