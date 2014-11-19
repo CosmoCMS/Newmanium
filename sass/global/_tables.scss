@@ -5,12 +5,21 @@
 
 td {
     border: 1px solid palette(gray, mid--light);
+    font-family: $font-alpha;
     padding: size(20);
+
+    &:last-child {
+        width: 100%;
+    }
 }
 
 th {
     @extend td;
     background-color: palette(gray, light);
+
+    &:last-child {
+        width: 100%;
+    }
 }
 
 table {

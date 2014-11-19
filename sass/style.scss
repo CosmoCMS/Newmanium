@@ -4,6 +4,15 @@ body, [ng-include="template"] {
     min-height: 100vh;
 }
 
+[ng-include="template"].ng-enter, [ng-include="template"].ng-leave {
+    transition: opacity .5s ease-in .05s;
+    opacity: 0;
+}
+
+[ng-include="template"].ng-enter-active, [ng-include="template"].ng-leave-active {
+    opacity: 1;
+}
+
 .cosmo-theme {
     min-height: 100%;
     @import "global/z-index";

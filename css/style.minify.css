@@ -11,6 +11,16 @@ body, [ng-include="template"] {
   min-height: 100vh;
 }
 
+[ng-include="template"].ng-enter, [ng-include="template"].ng-leave {
+  -webkit-transition: opacity .5s ease-in .05s;
+          transition: opacity .5s ease-in .05s;
+  opacity: 0;
+}
+
+[ng-include="template"].ng-enter-active, [ng-include="template"].ng-leave-active {
+  opacity: 1;
+}
+
 .cosmo-theme {
   min-height: 100%;
   /* z-index */
@@ -276,10 +286,17 @@ body, [ng-include="template"] {
 }
 .cosmo-theme td, .cosmo-theme th {
   border: 1px solid #dadada;
+  font-family: "quicksand", sans-serif;
   padding: 1.25rem;
+}
+.cosmo-theme td:last-child, .cosmo-theme th:last-child {
+  width: 100%;
 }
 .cosmo-theme th {
   background-color: #f7f7f7;
+}
+.cosmo-theme th:last-child {
+  width: 100%;
 }
 .cosmo-theme table {
   text-align: left;
@@ -943,10 +960,10 @@ body, [ng-include="template"] {
 .cosmo-theme .content-preview:nth-child(even) {
   background-color: white;
 }
-.cosmo-theme .content-preview .button--blue-border {
+.cosmo-theme .content-preview button {
   margin: 0 0.313rem 0.625rem 0;
 }
-.cosmo-theme .content-preview .button--blue-border:last-child {
+.cosmo-theme .content-preview button:last-child {
   margin-right: 0;
 }
 .cosmo-theme .content-preview h4 {
@@ -1065,6 +1082,7 @@ body, [ng-include="template"] {
 }
 .cosmo-theme .banner--lrg .header h1 {
   color: #f7f7f7;
+  text-align: left;
 }
 .cosmo-theme .banner--lrg .intro {
   -webkit-box-flex: 0;

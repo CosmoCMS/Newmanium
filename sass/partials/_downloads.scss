@@ -28,7 +28,7 @@
         background-color: palette(gray, white);
     }
 
-    .button--blue-border {
+    button {
         margin: 0 size(5) size(10) 0;
 
         &:last-child {
