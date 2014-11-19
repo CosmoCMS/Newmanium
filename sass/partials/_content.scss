@@ -155,3 +155,21 @@
 .rounded {
     border-radius: size(5);
 }
+
+.code--sharing {
+    flex: $col-twelve;
+    margin-bottom: size(20);
+
+    @media #{$bp-beta} {
+        flex: 3;
+    }
+}
+
+.code--preview {
+    flex: $col-twelve;
+    margin-bottom: size(20);
+
+    @media #{$bp-beta} {
+        flex: 1;
+    }
+}

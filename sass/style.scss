@@ -5,6 +5,7 @@ body, [ng-include="template"] {
 }
 
 .cosmo-theme {
+    min-height: 100%;
     @import "global/z-index";
     @import "global/media-queries";
     @import "global/margins-padding";
