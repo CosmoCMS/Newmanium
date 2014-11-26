@@ -103,10 +103,12 @@ nav {
             }
 
             a {
+                border: 0;
                 color: palette(blue, dark);
                 display: block;
                 font-weight: 400;
                 min-height: 2.1rem;
+                padding: 0;
 
                 &:hover {
                     color: palette(blue, light);

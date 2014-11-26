@@ -29,8 +29,7 @@ a, button {
 }
 
 a {
-    color: palette(blue, light);
-    font-weight: 400;
+    padding-bottom: size(5);
     text-decoration: none;
     transition: .025s ease-in;
 
@@ -61,16 +60,17 @@ blockquote {
 
 button {
     border: 0;
-    font-weight: 200;
+    font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, b {
+    color: palette(gray, mid--dark);
     font-family: $font-alpha;
 }
 
 h1 {
     font-size: 2.5rem;
-    font-weight: 200;
+    font-weight: 400;
     margin-bottom: 2.5rem;
 
     @media #{$bp-beta} {
@@ -80,7 +80,7 @@ h1 {
 
 h2 {
     font-size: 2.25rem;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.5;
 
     @media #{$bp-beta} {
@@ -90,7 +90,7 @@ h2 {
 
 h3 {
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 400;
     margin-bottom: 1.25rem;
     margin-top: 0;
 
@@ -101,7 +101,7 @@ h3 {
 
 h4 {
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 400;
     margin: 1rem 0;
 
     @media #{$bp-beta} {
@@ -131,7 +131,7 @@ h6 {
 
 p {
     font-size: 1.1rem;
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1.5;
     margin-top: 0;
 
@@ -147,7 +147,7 @@ small {
 
 input {
     font-family: $font-alpha;
-    font-weight: 200;
+    font-weight: 400;
 
     &:focus {
         outline: none;

@@ -75,6 +75,44 @@ body {
     padding-top: 4rem;
   }
 }
+.cosmo-theme ::-moz-selection {
+  background-color: #ea1d2c;
+  color: white;
+}
+.cosmo-theme ::selection {
+  background-color: #ea1d2c;
+  color: white;
+}
+.cosmo-theme .bg-blue--light {
+  background-color: #70c8c4;
+}
+.cosmo-theme .bg-blue--light p, .cosmo-theme .bg-blue--light h1, .cosmo-theme .bg-blue--light h2, .cosmo-theme .bg-blue--light h3, .cosmo-theme .bg-blue--light h4, .cosmo-theme .bg-blue--light h5, .cosmo-theme .bg-blue--light h6 {
+  color: #f7f7f7;
+}
+.cosmo-theme .bg-blue--light a {
+  color: #459e9b;
+}
+.cosmo-theme .bg-blue--light a:hover {
+  color: #4a6067;
+}
+.cosmo-theme .bg-blue--dark {
+  background-color: #4a6067;
+}
+.cosmo-theme .bg-blue--dark p, .cosmo-theme .bg-blue--dark h1, .cosmo-theme .bg-blue--dark h2, .cosmo-theme .bg-blue--dark h3, .cosmo-theme .bg-blue--dark h4, .cosmo-theme .bg-blue--dark h5, .cosmo-theme .bg-blue--dark h6 {
+  color: #f7f7f7;
+}
+.cosmo-theme .bg-gray--xlight {
+  background-color: #fdfdfd;
+}
+.cosmo-theme .bg-gray--light {
+  background-color: #f7f7f7;
+}
+.cosmo-theme .bg-green {
+  background-color: #20ba2c;
+}
+.cosmo-theme .bg-green--light {
+  background-color: #6dd595;
+}
 .cosmo-theme .container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -116,43 +154,9 @@ body {
       -ms-flex: 1;
           flex: 1;
 }
-.cosmo-theme ::-moz-selection {
-  background-color: #ea1d2c;
-  color: white;
-}
-.cosmo-theme ::selection {
-  background-color: #ea1d2c;
-  color: white;
-}
-.cosmo-theme .bg-blue--light {
-  background-color: #70c8c4;
-}
-.cosmo-theme .bg-blue--light p, .cosmo-theme .bg-blue--light h1, .cosmo-theme .bg-blue--light h2, .cosmo-theme .bg-blue--light h3, .cosmo-theme .bg-blue--light h4, .cosmo-theme .bg-blue--light h5, .cosmo-theme .bg-blue--light h6 {
-  color: #f7f7f7;
-}
-.cosmo-theme .bg-blue--light a {
-  color: #459e9b;
-}
-.cosmo-theme .bg-blue--light a:hover {
-  color: #4a6067;
-}
-.cosmo-theme .bg-blue--dark {
-  background-color: #4a6067;
-}
-.cosmo-theme .bg-blue--dark p, .cosmo-theme .bg-blue--dark h1, .cosmo-theme .bg-blue--dark h2, .cosmo-theme .bg-blue--dark h3, .cosmo-theme .bg-blue--dark h4, .cosmo-theme .bg-blue--dark h5, .cosmo-theme .bg-blue--dark h6 {
-  color: #f7f7f7;
-}
-.cosmo-theme .bg-gray--xlight {
-  background-color: #fdfdfd;
-}
-.cosmo-theme .bg-gray--light {
-  background-color: #f7f7f7;
-}
-.cosmo-theme .bg-green {
-  background-color: #20ba2c;
-}
-.cosmo-theme .bg-green--light {
-  background-color: #6dd595;
+.cosmo-theme .site-content p a {
+  border-bottom: 1px solid #70c8c4;
+  color: #70c8c4;
 }
 .cosmo-theme * {
   box-sizing: border-box;
@@ -161,8 +165,7 @@ body {
   outline: none;
 }
 .cosmo-theme a {
-  color: #70c8c4;
-  font-weight: 400;
+  padding-bottom: 0.313rem;
   text-decoration: none;
   -webkit-transition: .025s ease-in;
           transition: .025s ease-in;
@@ -189,14 +192,15 @@ body {
 }
 .cosmo-theme button {
   border: 0;
-  font-weight: 200;
+  font-weight: 400;
 }
 .cosmo-theme h1, .cosmo-theme h2, .cosmo-theme h3, .cosmo-theme h4, .cosmo-theme h5, .cosmo-theme h6, .cosmo-theme p, .cosmo-theme a, .cosmo-theme b {
+  color: #464646;
   font-family: "quicksand", sans-serif;
 }
 .cosmo-theme h1 {
   font-size: 2.5rem;
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 2.5rem;
 }
 @media only screen and (min-width: 768px) {
@@ -206,7 +210,7 @@ body {
 }
 .cosmo-theme h2 {
   font-size: 2.25rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.5;
 }
 @media only screen and (min-width: 768px) {
@@ -216,7 +220,7 @@ body {
 }
 .cosmo-theme h3 {
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 400;
   margin-bottom: 1.25rem;
   margin-top: 0;
 }
@@ -227,7 +231,7 @@ body {
 }
 .cosmo-theme h4 {
   font-size: 1.5rem;
-  font-weight: 200;
+  font-weight: 400;
   margin: 1rem 0;
 }
 @media only screen and (min-width: 768px) {
@@ -255,7 +259,7 @@ body {
 }
 .cosmo-theme p {
   font-size: 1.1rem;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.5;
   margin-top: 0;
 }
@@ -270,7 +274,7 @@ body {
 }
 .cosmo-theme input {
   font-family: "quicksand", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
 }
 .cosmo-theme input:focus {
   outline: none;
@@ -510,10 +514,12 @@ body {
   margin-right: 0;
 }
 .cosmo-theme nav ul li a {
+  border: 0;
   color: #4a6067;
   display: block;
   font-weight: 400;
   min-height: 2.1rem;
+  padding: 0;
 }
 .cosmo-theme nav ul li a:hover {
   color: #70c8c4;

@@ -35,5 +35,10 @@ $col-twelve: 0 0 100%;
 }
 
 .site-content {
-  flex: 1;
+    flex: 1;
+
+    p a {
+        border-bottom: 1px solid palette(blue, light);
+        color: palette(blue, light);
+    }
 }
