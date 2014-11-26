@@ -320,7 +320,7 @@ body {
 }
 .cosmo-theme ul, .cosmo-theme ol {
   font-family: "quicksand", sans-serif;
-  font-weight: 200;
+  font-weight: 400;
 }
 .cosmo-theme ul {
   padding-left: 2rem;
@@ -1166,7 +1166,7 @@ body {
   color: #f7f7f7;
   content: attr(tooltip);
   font-size: .9rem;
-  font-weight: 200;
+  font-weight: 400;
   left: -6rem;
   padding: 0.625rem 0.938rem;
   position: absolute;
