@@ -57,10 +57,16 @@
         width: 100%;
     }
 
-    .header h1 {
-        color: palette(gray, light);
-        text-align: left;
+    .header {
+        flex: $col-twelve;
+        
+        h1 {
+            color: palette(gray, light);
+            text-align: left;
+        }
     }
+
+
 
     .intro {
         flex: $col-twelve;

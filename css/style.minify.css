@@ -1,4 +1,4 @@
-body, [ng-include="template"] {
+body {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11,18 +11,27 @@ body, [ng-include="template"] {
   min-height: 100vh;
 }
 
-[ng-include="template"].ng-enter, [ng-include="template"].ng-leave {
-  -webkit-transition: opacity .5s ease-in .05s;
-          transition: opacity .5s ease-in .05s;
+[ng-include="template"].ng-enter {
   opacity: 0;
+  -webkit-transition: 1s ease;
+          transition: 1s ease;
 }
 
-[ng-include="template"].ng-enter-active, [ng-include="template"].ng-leave-active {
+[ng-include="template"].ng-enter-active {
   opacity: 1;
 }
 
+[ng-include="template"].ng-leave {
+  opacity: 1;
+  -webkit-transition: 1s ease;
+          transition: 1s ease;
+}
+
+[ng-include="template"].ng-leave-active {
+  opacity: 0;
+}
+
 .cosmo-theme {
-  min-height: 100%;
   /* z-index */
   /* setup easy margin/padding sass-map */
   /* colors */
@@ -894,10 +903,10 @@ body, [ng-include="template"] {
   }
 }
 .cosmo-theme .header {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   margin-bottom: 1.875rem;
   text-align: center;
 }
@@ -1079,6 +1088,12 @@ body, [ng-include="template"] {
   margin-bottom: 0;
   margin-top: 1.25rem;
   width: 100%;
+}
+.cosmo-theme .banner--lrg .header {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 .cosmo-theme .banner--lrg .header h1 {
   color: #f7f7f7;
