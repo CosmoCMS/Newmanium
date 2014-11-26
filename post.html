@@ -4,8 +4,8 @@
         <aside class="sidebar">
             <div class="icon--bg-light-blue">
                 <i class="fa fa-pencil"></i>
-                <p>Posted: 11.11.14</p>
-                <p>By: <a href="http://www.twitter.com/jordandunn">Jordan Dunn</a></p>
+                <p>{{page.published_date | date:'MM.dd.yyyy'}}</p>
+                <p>By: {{page.author.name}}</p>
             </div>
             <!-- <div cs-block="sidebar1"></div> -->
         </aside>

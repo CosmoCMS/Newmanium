@@ -1,4 +1,4 @@
-body {
+[ng-include="template"] {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
