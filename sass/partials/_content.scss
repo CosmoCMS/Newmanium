@@ -98,25 +98,21 @@
         flex: 5;
     }
 
+    hr {
+        margin-bottom: 4rem;
+    }
+
     .content-info {
         @extend .icon--bg-light-blue;
         text-align: left;
 
         i {
             display: none;
-
-            @media #{$bp-alpha} {
-                display: inline-block;
-                font-size: .8rem;
-                height: 2rem;
-                margin-right: 1rem;
-                padding: .65rem .5rem .65rem .7rem;
-                width: 2rem;
-            }
         }
 
         p {
             display: inline-block;
+            font-size: .85rem;
             margin-right: 1rem;
             margin-top: 0;
 
