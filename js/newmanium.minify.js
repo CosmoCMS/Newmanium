@@ -1,5 +1,22 @@
 angular.module('newmanium', [])
 
+.controller('blogOverviewCtrl', ['$scope', 'REST', function($scope, REST){
+    // Initialize 10 blog posts to show
+    $scope.limitNum = 10;
+    $scope.search = {};
+    $scope.search.tags = 'blog';
+    
+    // Get content
+    REST.content.query({}, function(data){
+        $scope.posts = data;
+    });
+    
+    // Watch for infinity scroll reaching the bottom
+    $scope.$on('infinityScroll', function(){
+        $scope.limitNum += 10;
+    });
+}])
+
 .directive('threeFeatures', [function(){
     return {
         templateUrl: 'themes/Newmanium/partials/three-features.html',
