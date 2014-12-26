@@ -1,11 +1,19 @@
 <div ng-include="'themes/Newmanium/partials/header.html'"></div>
 <main class="site-content">
+    <section class="banner--sml pad--vert" role="homepage banner" cs-bg-image="featured">
+        <div class="container">
+            <div class="intro">
+                <h1 cs-content="header"></h1>
+                <p cs-content="subheader"></p>
+            </div>
+        </div>
+    </section>
+
     <section class="pad-vert container">
         <aside class="sidebar">
             <div cs-block="sidebar1"></div>
         </aside>
         <div class="content--w-sidebar">
-            <h1 cs-content="header"></h1>
             <div cs-content="body"></div>
         </div>
     </section>

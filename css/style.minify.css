@@ -336,7 +336,7 @@
   line-height: 1.5;
   margin-bottom: 0.938rem;
 }
-.cosmo-theme .button--blue-mid, .cosmo-theme .button--blue-dark, .cosmo-theme .banner--lrg .download, .cosmo-theme .banner--lrg .github {
+.cosmo-theme .button--blue-mid, .cosmo-theme .button--blue-dark, .cosmo-theme .banner--lrg .download, .cosmo-theme .banner--sml .download, .cosmo-theme .banner--lrg .github, .cosmo-theme .banner--sml .github {
   background-color: transparent;
   border: 1px solid #4a6067;
   border-radius: 0.313rem;
@@ -351,14 +351,14 @@
   -webkit-transition: all .15s ease-in;
           transition: all .15s ease-in;
 }
-.cosmo-theme .button--blue-mid i, .cosmo-theme .button--blue-dark i, .cosmo-theme .banner--lrg .download i, .cosmo-theme .banner--lrg .github i {
+.cosmo-theme .button--blue-mid i, .cosmo-theme .button--blue-dark i, .cosmo-theme .banner--lrg .download i, .cosmo-theme .banner--sml .download i, .cosmo-theme .banner--lrg .github i, .cosmo-theme .banner--sml .github i {
   color: #4a6067;
   margin-right: .5rem;
 }
-.cosmo-theme .button--blue-mid:focus, .cosmo-theme .button--blue-dark:focus, .cosmo-theme .banner--lrg .download:focus, .cosmo-theme .banner--lrg .github:focus {
+.cosmo-theme .button--blue-mid:focus, .cosmo-theme .button--blue-dark:focus, .cosmo-theme .banner--lrg .download:focus, .cosmo-theme .banner--sml .download:focus, .cosmo-theme .banner--lrg .github:focus, .cosmo-theme .banner--sml .github:focus {
   color: white;
 }
-.cosmo-theme .button--blue-mid:hover, .cosmo-theme .button--blue-dark:hover, .cosmo-theme .banner--lrg .download:hover, .cosmo-theme .banner--lrg .github:hover {
+.cosmo-theme .button--blue-mid:hover, .cosmo-theme .button--blue-dark:hover, .cosmo-theme .banner--lrg .download:hover, .cosmo-theme .banner--sml .download:hover, .cosmo-theme .banner--lrg .github:hover, .cosmo-theme .banner--sml .github:hover {
   color: #f7f7f7;
 }
 .cosmo-theme .button--blue-mid {
@@ -413,7 +413,7 @@
   margin-bottom: -.4rem;
   width: 5rem;
 }
-.cosmo-theme footer i.fa-facebook, .cosmo-theme footer i.fa-twitter {
+.cosmo-theme footer i.fa-facebook, .cosmo-theme footer i.fa-twitter, .cosmo-theme footer i.fa-envelope {
   margin: 0 .5rem;
 }
 .cosmo-theme footer p {
@@ -428,18 +428,17 @@
   -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding: 2rem 0;
   text-align: center;
 }
 .cosmo-theme header {
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #dadada;
+  background-color: transparent;
   height: auto;
-  padding-bottom: .5rem;
+  position: absolute;
 }
 @media only screen and (min-width: 768px) {
   .cosmo-theme header {
-    height: 5rem;
-    padding-bottom: 0;
+    position: relative;
   }
 }
 .cosmo-theme header .container {
@@ -515,7 +514,7 @@
 }
 .cosmo-theme nav ul li a {
   border: 0;
-  color: #4a6067;
+  color: #fdfdfd;
   display: block;
   font-weight: 400;
   min-height: 2.1rem;
@@ -738,21 +737,6 @@
     width: 100%;
   }
 }
-.cosmo-theme .icon--bg-light-blue, .cosmo-theme .icon--bg-dark-blue, .cosmo-theme .content--w-sidebar .content-info, .cosmo-theme .content--wo-sidebar .content-info {
-  text-align: center;
-}
-.cosmo-theme .icon--bg-light-blue i, .cosmo-theme .icon--bg-dark-blue i, .cosmo-theme .content--w-sidebar .content-info i, .cosmo-theme .content--wo-sidebar .content-info i {
-  background-color: #70c8c4;
-  border-radius: 100%;
-  color: #f7f7f7;
-  font-size: 2.5rem;
-  height: 5rem;
-  padding: 1.25rem;
-  width: 5rem;
-}
-.cosmo-theme .icon--bg-light-blue p, .cosmo-theme .icon--bg-dark-blue p, .cosmo-theme .content--w-sidebar .content-info p, .cosmo-theme .content--wo-sidebar .content-info p {
-  margin-top: 1.75rem;
-}
 .cosmo-theme .icon--bg-dark-blue i {
   background-color: #4a6067;
 }
@@ -774,45 +758,55 @@
   padding-bottom: 1.25rem;
 }
 .cosmo-theme .content--border-right {
-  border-bottom: 1px solid #f7f7f7;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
-  margin-bottom: 5%;
-  padding-bottom: 5%;
+  padding: 5% 0;
+}
+.cosmo-theme .content--border-right h4 {
   text-align: center;
 }
-.cosmo-theme .content--border-right:last-child {
-  border-bottom: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
+.cosmo-theme .content--border-right i {
+  color: #fdfdfd;
+  display: block;
+  font-size: 3rem;
+  margin-right: .5rem;
+  opacity: .5;
+  text-align: center;
+  vertical-align: middle;
 }
 @media only screen and (min-width: 768px) {
   .cosmo-theme .content--border-right {
-    border-bottom: 0;
-    border-right: 1px solid #f7f7f7;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin-bottom: 0;
-    margin-right: 2.5%;
-    padding-bottom: 0;
-    padding-right: 2.5%;
+    padding: 0 5%;
+  }
+  .cosmo-theme .content--border-right:first-child {
+    padding-left: 0;
   }
   .cosmo-theme .content--border-right:last-child {
-    border-right: 0;
-    margin-right: 0;
     padding-right: 0;
   }
 }
-.cosmo-theme .content--border-right h4 {
-  text-align: left;
+@media only screen and (min-width: 1024px) {
+  .cosmo-theme .content--border-right h4 {
+    display: inline-block;
+  }
+  .cosmo-theme .content--border-right i {
+    display: inline-block;
+    text-align: left;
+  }
+  .cosmo-theme .content--border-right p {
+    margin-left: 4.4rem;
+  }
 }
-.cosmo-theme .content--border-right p {
-  font-size: 1.2rem;
-  text-align: left;
+@media only screen and (min-width: 768px) {
+  .cosmo-theme .content--border-right.marg-bottom {
+    margin-bottom: 3rem;
+  }
 }
 .cosmo-theme .content--tabs {
   margin: 0 auto;
@@ -830,12 +824,20 @@
 }
 @media only screen and (min-width: 768px) {
   .cosmo-theme .content--w-media .description {
-    -webkit-box-flex: 1.5;
-    -webkit-flex: 1.5;
-        -ms-flex: 1.5;
-            flex: 1.5;
-    padding-right: 5%;
+    -webkit-box-flex: .75;
+    -webkit-flex: .75;
+        -ms-flex: .75;
+            flex: .75;
   }
+}
+.cosmo-theme .content--w-media .description h4 {
+  margin-top: 0;
+}
+.cosmo-theme .content--w-media .pad-left {
+  padding-left: 4rem;
+}
+.cosmo-theme .content--w-media .pad-right {
+  padding-right: 4rem;
 }
 .cosmo-theme .content--w-media .media {
   -webkit-box-flex: 0;
@@ -1022,7 +1024,7 @@
   float: left;
   width: 100%;
 }
-.cosmo-theme .banner--lrg {
+.cosmo-theme .banner--lrg, .cosmo-theme .banner--sml {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -1038,37 +1040,32 @@
           justify-content: center;
   background: center center no-repeat;
   background-size: cover;
-  height: 100vh;
-  letter-spacing: -.05rem;
+  height: auto;
+  padding-bottom: 4rem;
+  padding-top: 15rem;
 }
 @media only screen and (min-width: 768px) {
-  .cosmo-theme .banner--lrg {
-    background: center center no-repeat fixed;
-    background-size: cover;
-    height: 80vh;
+  .cosmo-theme .banner--lrg, .cosmo-theme .banner--sml {
+    height: 70vh;
+    margin-top: -5.3rem;
+    padding-top: 8rem;
   }
 }
-.cosmo-theme .banner--lrg p {
+.cosmo-theme .banner--lrg p, .cosmo-theme .banner--sml p {
   color: #f7f7f7;
-  font-size: 1.25rem;
   margin-bottom: 0;
 }
-@media only screen and (min-width: 768px) {
-  .cosmo-theme .banner--lrg p {
-    font-size: 2rem;
-  }
-}
-.cosmo-theme .banner--lrg span {
+.cosmo-theme .banner--lrg span, .cosmo-theme .banner--sml span {
   letter-spacing: .05rem;
 }
-.cosmo-theme .banner--lrg .container {
+.cosmo-theme .banner--lrg .container, .cosmo-theme .banner--sml .container {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
 }
-.cosmo-theme .banner--lrg .download, .cosmo-theme .banner--lrg .github {
+.cosmo-theme .banner--lrg .download, .cosmo-theme .banner--sml .download, .cosmo-theme .banner--lrg .github, .cosmo-theme .banner--sml .github {
   background-color: #70c8c4;
   border: 0;
   color: white;
@@ -1076,30 +1073,20 @@
   margin-bottom: 1.25rem;
   width: 100%;
 }
-.cosmo-theme .banner--lrg .download:hover, .cosmo-theme .banner--lrg .github:hover {
+.cosmo-theme .banner--lrg .download:hover, .cosmo-theme .banner--sml .download:hover, .cosmo-theme .banner--lrg .github:hover, .cosmo-theme .banner--sml .github:hover {
   background-color: #4a6067;
 }
-.cosmo-theme .banner--lrg .download:hover i, .cosmo-theme .banner--lrg .github:hover i {
+.cosmo-theme .banner--lrg .download:hover i, .cosmo-theme .banner--sml .download:hover i, .cosmo-theme .banner--lrg .github:hover i, .cosmo-theme .banner--sml .github:hover i {
   color: #70c8c4;
 }
-.cosmo-theme .banner--lrg .github {
+.cosmo-theme .banner--lrg .github, .cosmo-theme .banner--sml .github {
   background-color: #dadada;
   color: #4a6067;
   margin-bottom: 0;
   margin-top: 1.25rem;
   width: 100%;
 }
-.cosmo-theme .banner--lrg .header {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-}
-.cosmo-theme .banner--lrg .header h1 {
-  color: #f7f7f7;
-  text-align: left;
-}
-.cosmo-theme .banner--lrg .intro {
+.cosmo-theme .banner--lrg .intro, .cosmo-theme .banner--sml .intro {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;
@@ -1107,16 +1094,20 @@
   margin-bottom: 1.875rem;
   text-align: left;
 }
+.cosmo-theme .banner--lrg .intro h1, .cosmo-theme .banner--sml .intro h1 {
+  color: #f7f7f7;
+  text-align: left;
+}
 @media only screen and (min-width: 1024px) {
-  .cosmo-theme .banner--lrg .intro {
-    -webkit-box-flex: 3;
-    -webkit-flex: 3;
-        -ms-flex: 3;
-            flex: 3;
+  .cosmo-theme .banner--lrg .intro, .cosmo-theme .banner--sml .intro {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
     margin-bottom: 0;
   }
 }
-.cosmo-theme .banner--lrg .actions {
+.cosmo-theme .banner--lrg .actions, .cosmo-theme .banner--sml .actions {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 100%;
       -ms-flex: 0 0 100%;
@@ -1124,7 +1115,7 @@
   text-align: center;
 }
 @media only screen and (min-width: 1024px) {
-  .cosmo-theme .banner--lrg .actions {
+  .cosmo-theme .banner--lrg .actions, .cosmo-theme .banner--sml .actions {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -1132,8 +1123,16 @@
     margin-left: 5%;
   }
 }
-.cosmo-theme .banner--lrg .actions span {
+.cosmo-theme .banner--lrg .actions span, .cosmo-theme .banner--sml .actions span {
   color: #f7f7f7;
+}
+.cosmo-theme .banner--sml {
+  background-color: #4a6067;
+}
+@media only screen and (min-width: 768px) {
+  .cosmo-theme .banner--sml {
+    height: 25rem;
+  }
 }
 .cosmo-theme .tooltip {
   display: inline;

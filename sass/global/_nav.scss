@@ -15,7 +15,7 @@ footer {
         width: 5rem;
     }
 
-    i.fa-facebook, i.fa-twitter {
+    i.fa-facebook, i.fa-twitter, i.fa-envelope {
         margin: 0 .5rem;
     }
 
@@ -30,19 +30,18 @@ footer {
 
     .content--footer {
         flex: 1;
+        padding: 2rem 0;
         text-align: center;
     }
 }
 
 header {
-    background-color: palette(gray, light);
-    border-bottom: 1px solid palette(gray, mid--light);
+    background-color: transparent;
     height: auto;
-    padding-bottom: .5rem;
+    position: absolute;
 
     @media #{$bp-beta} {
-        height: 5rem;
-        padding-bottom: 0;
+        position: relative;
     }
 
     .container {
@@ -104,7 +103,7 @@ nav {
 
             a {
                 border: 0;
-                color: palette(blue, dark);
+                color: palette(gray, xlight);
                 display: block;
                 font-weight: 400;
                 min-height: 2.1rem;

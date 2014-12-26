@@ -2,23 +2,19 @@
     @include center;
     background: center center no-repeat;
     background-size: cover;
-    height: 100vh;
-    letter-spacing: -.05rem;
+    height: auto;
+    padding-bottom: 4rem;
+    padding-top: 15rem;
 
     @media #{$bp-beta} {
-        background: center center no-repeat fixed;
-        background-size: cover;
-        height: 80vh;
+        height: 70vh;
+        margin-top: -5.3rem;
+        padding-top: 8rem;
     }
 
     p {
         color: palette(gray, light);
-        font-size: 1.25rem;
         margin-bottom: 0;
-
-        @media #{$bp-beta} {
-            font-size: 2rem;
-        }
     }
 
     span {
@@ -57,15 +53,6 @@
         width: 100%;
     }
 
-    .header {
-        flex: $col-twelve;
-        
-        h1 {
-            color: palette(gray, light);
-            text-align: left;
-        }
-    }
-
 
 
     .intro {
@@ -73,8 +60,13 @@
         margin-bottom: size(30);
         text-align: left;
 
+        h1 {
+            color: palette(gray, light);
+            text-align: left;
+        }
+
         @media #{$bp-gamma} {
-            flex: 3;
+            flex: 2;
             margin-bottom: 0;
         }
     }
@@ -91,5 +83,14 @@
         span {
             color: palette(gray, light);
         }
+    }
+}
+
+.banner--sml {
+    @extend .banner--lrg;
+    background-color: palette(blue, dark);
+
+    @media #{$bp-beta} {
+        height: 25rem;
     }
 }
