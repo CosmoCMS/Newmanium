@@ -1,16 +1,16 @@
 <div ng-include="'themes/Newmanium/partials/header.html'"></div>
 <main class="site-content">
-    <section class="pad-vert container">
-        <aside class="sidebar">
-            <div class="icon--bg-light-blue">
-                <i class="fa fa-pencil"></i>
-                <p>{{page.published_date | date:'MM.dd.yyyy'}}</p>
-                <p>By: {{page.author.name}}</p>
+    <section class="banner--sml pad--vert" role="banner" cs-bg-image="featured">
+        <div class="container">
+            <div class="intro">
+                <h1 cs-content="header"></h1>
+                <p> {{page.published_date | date:'MM.dd.yyyy'}} By: {{page.author.name}}</p>
             </div>
-            <!-- <div cs-block="sidebar1"></div> -->
-        </aside>
-        <div class="content--w-sidebar">
-            <h1 cs-content="header" type="text"></h1>
+        </div>
+    </section>
+
+    <section class="pad-vert container">
+        <div class="content--wo-sidebar">
             <div cs-content="body"></div>
         </div>
     </section>

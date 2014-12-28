@@ -22,6 +22,10 @@
 
     h4 {
         text-align: center;
+
+        @media #{$bp-gamma} {
+            display: inline-block;
+        }
     }
 
     i {
@@ -32,6 +36,23 @@
         opacity: .5;
         text-align: center;
         vertical-align: middle;
+        width: 100%;
+
+        @media #{$bp-gamma} {
+            display: inline-block;
+            text-align: center;
+            width: 3.7rem;
+        }
+    }
+
+    p {
+        @media #{$bp-gamma} {
+            margin-left: 4.4rem;
+        }
+    }
+
+    .no-marg {
+        margin: 0;
     }
 
     @media #{$bp-beta} {
@@ -44,21 +65,6 @@
 
         &:last-child {
             padding-right: 0;
-        }
-    }
-
-    @media #{$bp-gamma} {
-        h4 {
-            display: inline-block;
-        }
-
-        i {
-            display: inline-block;
-            text-align: left;
-        }
-
-        p {
-            margin-left: 4.4rem;
         }
     }
 
@@ -95,11 +101,15 @@
     }
 
     .pad-left {
-        padding-left: 4rem;
+        @media #{$bp-beta} {
+            padding-left: 4rem;
+        }
     }
 
     .pad-right {
-        padding-right: 4rem;
+        @media #{$bp-beta} {
+            padding-right: 4rem;
+        }
     }
 
     .media {
@@ -129,7 +139,6 @@
     }
 
     .content-info {
-        @extend .icon--bg-light-blue;
         text-align: left;
 
         i {

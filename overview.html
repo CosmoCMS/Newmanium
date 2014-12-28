@@ -1,10 +1,17 @@
 <div ng-include="'themes/Newmanium/partials/header.html'"></div>
 <main class="site-content" ng-controller="blogOverviewCtrl">
+
+    <section class="banner--sml pad--vert" role="banner" cs-bg-image="featured">
+        <div class="container">
+            <div class="intro">
+                <h1 cs-content="header"></h1>
+                <p cs-content="subheader"></p>
+            </div>
+        </div>
+    </section>
+
     <section class="pad-vert container">
-        <aside class="sidebar">
-            <div cs-block="sidebar1"></div>
-        </aside>
-        <div class="content--w-sidebar">
+        <div class="content--wo-sidebar">
             <div infinity-scroll ng-repeat="post in posts | filter:search:true | limitTo:limitNum">
                 <h3><a ng-href="{{post.url}}">{{post.header | plaintext}}</a></h3>
                 <div class="content-info">

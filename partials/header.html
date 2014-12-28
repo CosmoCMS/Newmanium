@@ -2,8 +2,9 @@
     <div class="container">
         <div class="logo">
             <img cs-logo>
+            <a class="nav--mobile" ng-click="showMenu=!showMenu"><i class="fa fa-bars"></i></a>
         </div>
-        <nav>
+        <nav class="nav--mobile-show" ng-class="{'hide-mobile': !showMenu}">
             <ul cs-menu="primary"></ul>
         </nav>
     </div>

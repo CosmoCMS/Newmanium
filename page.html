@@ -1,6 +1,6 @@
 <div ng-include="'themes/Newmanium/partials/header.html'"></div>
 <main class="site-content">
-    <section class="banner--sml pad--vert" role="homepage banner" cs-bg-image="featured">
+    <section class="banner--sml pad--vert" role="banner" cs-bg-image="featured">
         <div class="container">
             <div class="intro">
                 <h1 cs-content="header"></h1>
@@ -11,7 +11,9 @@
 
     <section class="pad-vert container">
         <aside class="sidebar">
-            <div cs-block="sidebar1"></div>
+            <a class="nav--mobile" ng-click="showSideNav=!showSideNav"><i class="fa fa-bars"></i>View More</a>
+            <div cs-block="sidebar1">
+            </div>
         </aside>
         <div class="content--w-sidebar">
             <div cs-content="body"></div>

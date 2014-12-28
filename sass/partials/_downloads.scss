@@ -1,99 +1,68 @@
-.add-on--title {
-    color: palette(gray, mid--light);
-}
-
-.close {
-    float: left;
-    font-size: 2rem;
-    text-align: right;
-    width: 100%;
-
-    a {
-        color: palette(gray, mid--light);
-        transition: .15s ease;
-
-        &:hover {
-            color: palette(gray, mid);
-        }
-    }
-}
-
 .content-preview {
-    background-color: palette(gray, xlight);
-    border-radius: size(5);
+    background: center center no-repeat;
+    background-color: palette(blue, light);
+    background-size: cover;
+    flex: 0 0 100%;
+    height: 20rem;
     padding: size(15);
-    width: 100%;
+    position: relative;
+    text-align: center;
 
-    &:nth-child(even) {
-        background-color: palette(gray, white);
+    @media #{$bp-beta} {
+        flex: 0 0 50%;
     }
 
-    button {
-        margin: 0 size(5) size(10) 0;
-
-        &:last-child {
-            margin-right: 0;
-        }
+    @media #{$bp-gamma} {
+        flex: 0 0 33.3333%;
     }
 
     h4 {
-        display: inline-block;
-        margin-right: size(10);
+        color: palette(gray, xlight);
     }
 
-    i {
-        font-size: .85rem;
-    }
-
-    img {
-
-        @media #{$bp-beta} {
-            transition: .25s ease-in-out .35s;
-
-            &:hover {
-                width: 100%;
-            }
-
-            &:nth-child(even) {
-                margin-right: 0;
-            }
-
-            &:nth-child(1n+3) {
-                margin-top: 0;
-            }
+    &:hover {
+        .content-preview--hover {
+            opacity: 1;
         }
     }
 }
 
-.cplus {
-    color: palette(brand, yellow);
-
-    &:hover {
-        color: palette(brand, yellow);
-    }
-}
-
-.fail {
-    color: palette(brand, red);
-
-    &:hover {
-        color: palette(brand, red);
-    }
-}
-
-.images {
-    float: left;
-}
-
-.pass {
-    color: palette(brand, green);
-
-    &:hover {
-        color: palette(brand, green);
-    }
-}
-
-.screenshots {
-    float: left;
+.content-preview .content-preview--hover {
+    background-color: palette(blue, dark--two-third);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    padding: size(15);
+    position: absolute;
+    text-align: center;
+    top: 0;
+    transition: opacity .15s linear;
     width: 100%;
+
+    .button--blue-mid {
+        color: palette(gray, xlight);
+        flex: 0 0 100%;
+        margin: 0;
+
+        i {
+            color: palette(blue, light);
+        }
+
+        &:hover {
+
+            i {
+                color: palette(blue, dark);
+            }
+        }
+    }
+
+    &.container {
+        justify-content: flex-start;
+    }
+
+    p {
+        color: palette(gray, xlight);
+        height: 7rem;
+        flex: 0 0 100%;
+    }
 }
