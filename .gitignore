@@ -1,5 +1,5 @@
 
-*.codekit
+*node_modules
 
 *.scssc
 
