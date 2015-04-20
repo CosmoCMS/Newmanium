@@ -1,11 +1,19 @@
-<header>
-    <div class="container">
-        <div class="logo">
-            <img cs-logo>
-            <a class="nav--mobile" ng-click="showMenu=!showMenu"><i class="fa fa-bars"></i></a>
-        </div>
-        <nav class="nav--mobile-show" ng-class="{'hide-mobile': !showMenu}">
-            <ul cs-menu="primary"></ul>
-        </nav>
+<header class="container">
+    <div class="logo">
+        <img cs-logo>
     </div>
+
+    <nav ng-show="showNav">
+        <a ng-click="showNav=!showNav"><i class="fa fa-times"></i></a>
+        <ul cs-menu="primary"></ul>
+    </nav>
+
+    <div class="social">
+        <a href="https://www.github.com/cosmocms"><i class="fa fa-github"></i></a>
+        <a href="https://www.facebook.com/cosmocms"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.twitter.com/cosmocms"><i class="fa fa-twitter"></i></a>
+    </div>
+
+    <a ng-click="showNav=!showNav"><i class="fa fa-bars"></i></a>
+
 </header>

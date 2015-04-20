@@ -46,8 +46,11 @@ $colors: (
 
 .bg-blue--light {
     background-color: palette(blue, light);
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    padding: 2rem;
 
-    p, h1, h2, h3, h4, h5, h6 {
+    p, h1, h2, h3, h4, h5, h6, i {
         color: palette(gray, light);
     }
 
@@ -58,28 +61,31 @@ $colors: (
             color: palette(blue, dark);
         }
     }
-}
 
-.bg-blue--dark {
-    background-color: palette(blue, dark);
-
-    p, h1, h2, h3, h4, h5, h6 {
-        color: palette(gray, light);
+    i {
+        font-size: 1.5rem;
     }
 }
 
-.bg-gray--xlight {
-    background-color: palette(gray, xlight);
-}
-
-.bg-gray--light {
-    background-color: palette(gray, light);
-}
-
-.bg-green {
-    background-color: palette(brand, green);
+.bg-blue--dark {
+    @extend .bg-blue--light;
+    background-color: palette(blue, dark);
 }
 
 .bg-green--light {
     background-color: palette(brand, green--light);
+    flex: 0 0 100%;
+    text-align: center;
+
+    h2 {
+        color: palette(gray, light);
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    p {
+        color: palette(gray, light);
+        flex: 0 0 100%;
+        text-align: center;
+    }
 }

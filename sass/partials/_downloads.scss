@@ -1,19 +1,27 @@
+.container--flex {
+    display: flex;
+    flex-wrap: wrap;
+
+    .center {
+        min-height: 20rem;
+    }
+}
+
 .content-preview {
     background: center center no-repeat;
     background-color: palette(blue, light);
     background-size: cover;
-    flex: 0 0 100%;
-    height: 20rem;
+    flex: $col-twelve;
     padding: size(15);
     position: relative;
     text-align: center;
 
     @media #{$bp-beta} {
-        flex: 0 0 50%;
+        flex: $col-six;
     }
 
     @media #{$bp-gamma} {
-        flex: 0 0 33.3333%;
+        flex: $col-four;
     }
 
     h4 {
@@ -22,6 +30,7 @@
 
     &:hover {
         .content-preview--hover {
+            display: block;
             opacity: 1;
         }
     }
@@ -29,23 +38,24 @@
 
 .content-preview .content-preview--hover {
     background-color: palette(blue, dark--two-third);
-    height: 100%;
-    left: 0;
-    opacity: 0;
+    display: none;
     padding: size(15);
+    opacity: 0;
     position: absolute;
-    text-align: center;
+    right: 0;
     top: 0;
+    text-align: center;
     transition: opacity .15s linear;
     width: 100%;
 
     .button--blue-mid {
         color: palette(gray, xlight);
-        flex: 0 0 100%;
-        margin: 0;
+        display: block;
+        margin: 1rem 0;
 
         i {
             color: palette(blue, light);
+            margin-right: .5rem;
         }
 
         &:hover {

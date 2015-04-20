@@ -1,7 +1,7 @@
 <div ng-include="'themes/Newmanium/partials/header.html'"></div>
 <main class="site-content" ng-controller="blogOverviewCtrl">
 
-    <section class="banner--sml pad--vert" role="banner" cs-bg-image="featured">
+    <section class="banner--sml container" role="banner" cs-bg-image="featured">
         <div class="container">
             <div class="intro">
                 <h1 cs-content="header"></h1>
@@ -10,18 +10,14 @@
         </div>
     </section>
 
-    <section class="pad-vert container">
-        <div class="content--wo-sidebar">
-            <div infinity-scroll ng-repeat="post in posts | filter:search:true | limitTo:limitNum">
-                <h3><a ng-href="{{post.url}}">{{post.header | plaintext}}</a></h3>
-                <div class="content-info">
-                    <i class="fa fa-pencil"></i>
-                    <p>Posted: {{post.published_date * 1000 | date:'MM/dd/yyyy'}}</p>
-                    <p>By: {{post.author.name}}</p>
-                </div>
-                <p>{{post.description}}</p>
-                <hr>
+    <section class="container">
+        <div class="col--full-width pad-vert" infinity-scroll ng-repeat="post in posts | filter:search:true | limitTo:limitNum">
+            <h3><a ng-href="{{post.url}}">{{post.header | plaintext}}</a></h3>
+            <div class="content-info">
+                <p>Posted: {{post.published_date * 1000 | date:'MM/dd/yyyy'}}</p>
+                <p>By: {{post.author.name}}</p>
             </div>
+            <p>{{post.description}}</p>
         </div>
     </section>
 </main>

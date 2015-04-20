@@ -22,25 +22,27 @@
     opacity: 0;
 }
 
+
 .cosmo-theme {
+    background-color: #EEF2F3;
     @import "global/z-index";
     @import "global/media-queries";
     @import "global/margins-padding";
     @import "global/color";
-    @import "global/grid";
     @import "global/type";
     @import "global/tables";
     @import "global/lists";
     @import "global/buttons";
     @import "global/nav";
     @import "global/img";
-    @import "global/icons";
 
-    @import "partials/content";
     @import "partials/downloads";
     @import "partials/banners";
-    @import "partials/tooltip";
     @import "partials/code";
 
     @import "global/shame";
+
+    main {
+        flex: 1;
+    }
 }

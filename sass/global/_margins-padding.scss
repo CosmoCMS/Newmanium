@@ -8,6 +8,42 @@ $size: (
     30: 1.875rem,
 );
 
+$col-one: 0 0 6.77966%;
+$col-two: 0 0 15.25424%;
+$col-three: 0 0 23.72881%;
+$col-four: 0 0 32.20339%;
+$col-five: 0 0 40.67797%;
+$col-six: 0 0 50%;
+$col-seven: 0 0 57.62712%;
+$col-eight: 0 0 66.66667%;
+$col-nine: 0 0 75%;
+$col-ten: 0 0 83.05085%;
+$col-eleven: 0 0 91.52542%;
+$col-twelve: 0 0 100%;
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media #{$bp-gamma} {
+        max-width: 70rem;
+    }
+
+    @media #{$bp-delta} {
+        padding: 0;
+    }
+}
+
+.container-sml {
+    @extend .container;
+
+    @media #{$bp-gamma} {
+        max-width: 50rem;
+    }
+}
+
 @function size($dimension) {
   @if map-has-key($size, $dimension) {
     @return map-get($size, $dimension);
@@ -19,30 +55,95 @@ $size: (
 @mixin center {
     align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
+}
+
+.marg-right {
+    margin: size(30) 0;
+
+    @media #{$bp-beta} {
+        margin-right: size(30);
+    }
 }
 
 .center {
     @include center;
 }
 
-.pad-horz {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+
+.col--two {
+    flex: $col-twelve;
+    margin: 0 auto;
+    max-width: 25rem;
 
     @media #{$bp-beta} {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        flex: $col-five;
+    }
+
+    @media #{$bp-delta} {
+        flex: $col-five;
+    }
+
+    h4 {
+        display: inline-block;
+        margin-top: 0;
+    }
+
+    i {
+        margin-right: 1rem;
     }
 }
 
-.pad-vert {
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
+.col--one-third {
+    flex: $col-twelve;
+    max-width: 20rem;
 
     @media #{$bp-beta} {
-        padding-bottom: 4rem;
-        padding-top: 4rem;
+        flex: $col-five;
+        margin-right: 2rem;
+
+        &:nth-child(even) {
+            margin-right: 0;
+        }
     }
+
+    h4 {
+        display: inline-block;
+        margin-top: 0;
+    }
+
+    i {
+        margin-right: 1rem;
+    }
+}
+
+.col--two-third {
+    flex: $col-twelve;
+    max-width: 46rem;
+
+    @media #{$bp-beta} {
+        flex: $col-six;
+    }
+
+    @media #{$bp-gamma} {
+        flex: $col-seven;
+    }
+
+    h4 {
+        display: inline-block;
+        margin-top: 0;
+    }
+
+    i {
+        margin-right: 1rem;
+    }
+}
+
+.col--full-width {
+    flex: $col-twelve;
+}
+
+.pad-vert {
+    padding: 2rem 0;
 }

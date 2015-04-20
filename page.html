@@ -1,23 +1,11 @@
-<div ng-include="'themes/Newmanium/partials/header.html'"></div>
-<main class="site-content">
-    <section class="banner--sml pad--vert" role="banner" cs-bg-image="featured">
-        <div class="container">
-            <div class="intro">
-                <h1 cs-content="header"></h1>
-                <p cs-content="subheader"></p>
-            </div>
-        </div>
-    </section>
+<div ng-include="'themes/Newmanium/partials/header.html'">
 
-    <section class="pad-vert container">
-        <aside class="sidebar">
-            <a class="nav--mobile" ng-click="showSideNav=!showSideNav"><i class="fa fa-bars"></i>View More</a>
-            <div cs-block="sidebar1">
-            </div>
-        </aside>
-        <div class="content--w-sidebar">
-            <div cs-content="body"></div>
-        </div>
-    </section>
+</div>
+<main class="container-sml">
+    <h1 cs-content="header"></h1>
+    <p cs-content="subheader"></p>
+    <section cs-content="body"></section>
 </main>
-<div ng-include="'themes/Newmanium/partials/footer.html'"></div>
+<div ng-include="'themes/Newmanium/partials/footer.html'">
+
+</div>

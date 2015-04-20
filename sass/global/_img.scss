@@ -92,39 +92,39 @@ img.img--right {
         margin-left: -14%;
         width: 128.5%;
     }
+}
 
-    img {
-        float: left;
-        margin: 0;
-        transition: .5s ease;
-        vertical-align: top;
-        width: 100%;
+.cs-gallery img {
+    float: left;
+    margin: 0;
+    transition: .5s ease;
+    vertical-align: top;
+    width: 100%;
 
-        @media #{$bp-alpha} and #{$bp-beta--end} {
-            width: 50%;
+    @media #{$bp-alpha} and #{$bp-beta--end} {
+        width: 50%;
 
-            &:nth-child(3n+3) {
-                width: 100%;
-            }
+        &:nth-child(3n+3) {
+            width: 100%;
         }
+    }
 
-        @media #{$bp-gamma} {
-            min-height: 15rem;
-            max-height: 15rem;
-            opacity: .5;
-            transition: .5s ease .25s;
-            width: 33%;
+    @media #{$bp-gamma} {
+        min-height: 15rem;
+        max-height: 15rem;
+        opacity: .5;
+        transition: .5s ease .25s;
+        width: 33%;
 
-            &:hover {
-                cursor: pointer;
-                max-height: 30rem;
-                opacity: 1;
-                width: 66%;
+        &:hover {
+            cursor: pointer;
+            max-height: 30rem;
+            opacity: 1;
+            width: 66%;
 
-                &:last-child {
-                    max-height: 1000rem;
-                    width: 100%;
-                }
+            &:last-child {
+                max-height: 1000rem;
+                width: 100%;
             }
         }
     }
